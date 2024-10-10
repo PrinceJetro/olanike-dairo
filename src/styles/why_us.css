@@ -1,0 +1,44 @@
+.why_us {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    flex-wrap: wrap
+  }
+  
+  .why_us > div {
+    background-color: #f1f1f1;
+    width: 350px;
+    height: 450px;
+    margin: 20px;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+.why_us > div i{
+  font-size: 72px;
+  margin-bottom: 15%;
+  color: rgb(112, 112, 112);
+}
+  
+.why_us > div h3{
+  font-size: 16px;
+  color: rgb(35, 35, 35);
+  padding-bottom: 16px;
+  padding-top: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+  
+.why_us > div p{
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 25.5px;
+  color: rgb(118, 118, 118);
+  overflow-wrap: break-word;
+}

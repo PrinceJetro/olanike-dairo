@@ -1,0 +1,27 @@
+.navbar-brand img {
+    height: 45px;
+    margin-right: 100px;
+  }
+  
+  .nav-link {
+    font-weight: 700;
+    color: aliceblue;
+  }
+  
+  .navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar.scrolled {
+    background-color: rgb(112, 112, 112);  }
+  
+  @media screen and (max-width: 680px) {
+    .navbar-toggler {
+      background-color: whitesmoke;
+    }
+    .navbar-toggler-icon {
+      background-color: rgb(63, 62, 62);
+    }
+  }
+  
