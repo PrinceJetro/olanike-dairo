@@ -32,69 +32,11 @@ function GetInTouch() {
       <h2>Get in Touch</h2>
 
       <div className="get-in-touch-content">
-        {/* Contact Form */}
-        <form
-          className="contact-form"
-          onSubmit={(e) => {
-            e.preventDefault();
-            window.location.href = prepareMailtoLink(); // Open mailto link
-          }}
-        >
-          <div className="form-group">
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Your Name"
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Your Email"
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="subject">Subject</label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              placeholder="Subject"
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Your Message"
-              required
-            ></textarea>
-          </div>
-
-          <button type="submit" className="submit-btn">
-            Send Message
-          </button>
-        </form>
+        <div className="number_container">
+          <img src="https://africa-school-bucket3.s3.amazonaws.com/static/img/school/2022/01/28/univelcity.jpg"/>
+          <h1 className="number_container_text">Call Now: {general.school_phone} </h1>
+        </div>
+       
 
         {/* Google Map */}
         
@@ -116,3 +58,5 @@ function GetInTouch() {
 
 
 export default GetInTouch;
+
+

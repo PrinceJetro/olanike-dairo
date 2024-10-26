@@ -2,6 +2,7 @@
   background-color: #333;
   color: white;
   padding: 40px 0;
+  margin-top: 20px;
 }
 
 .footer-container {
@@ -46,22 +47,22 @@
   text-decoration: underline;
 }
 
-.social-icons a {
+.footer .social-icons a {
   font-size: 1.5rem;
   margin-right: 15px;
   color: white;
 }
 
-.social-icons a:hover {
+.footer .social-icons a:hover {
   color: #ddd;
 }
 
-.newsletter-form {
+.footer .newsletter-form {
   display: flex;
   flex-direction: column;
 }
 
-.newsletter-form input {
+.footer .newsletter-form input {
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -69,7 +70,7 @@
   width: 100%;
 }
 
-.newsletter-form button {
+.footer .newsletter-form button {
   padding: 10px;
   background-color: #28a745;
   border: none;
@@ -78,16 +79,16 @@
   cursor: pointer;
 }
 
-.newsletter-form button:hover {
+.footer .newsletter-form button:hover {
   background-color: #218838;
 }
 
-.footer-bottom {
+.footer .footer-bottom {
   text-align: center;
   margin-top: 40px;
 }
 
-.footer-bottom p {
+.footer .footer-bottom p {
   font-size: 0.9rem;
   color: #bbb;
 }

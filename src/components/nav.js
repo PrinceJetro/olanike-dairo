@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import "../styles/navbar.css";
-import general from "../data/general";
+import logo from "../images/logo.png";
+import { Link } from 'react-router-dom';
+
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,32 +27,34 @@ export default function Navbar() {
   return (
     <nav className={`navbar navbar-expand-lg fixed-top p-3 ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          <img src={general.school_logo} alt="School Logo" />
-        </a>
+        <Link className="navbar-brand" to="/">
+          <img src={logo} alt="School Logo" />
+        </Link>
+    
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">Home</a>
+              <Link className="nav-link" aria-current="page" to="/home">Home</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#aboutus">About Us</a>
+              <Link className="nav-link" to="/about">About Us</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#primary">Primary</a>
+              <Link className="nav-link" to="/academics">Academics</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#secondary">Secondary</a>
+              <Link className="nav-link" to="/contact">Contact</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#gallery" tabIndex="-1" aria-disabled="true">Gallery</a>
+              <Link className="nav-link" to="/news">News and Updates</Link>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    
   );
 }

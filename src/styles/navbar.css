@@ -1,11 +1,13 @@
 .navbar-brand img {
-    height: 45px;
+    height: 30px;
     margin-right: 100px;
   }
   
   .nav-link {
-    font-weight: 700;
-    color: aliceblue;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
   }
   
   .navbar {
@@ -14,7 +16,8 @@
   }
   
   .navbar.scrolled {
-    background-color: rgb(112, 112, 112);  }
+    background-color: #333;
+  }
   
   @media screen and (max-width: 680px) {
     .navbar-toggler {

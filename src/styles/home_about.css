@@ -1,0 +1,55 @@
+.home_about{
+    text-align: left;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.home_about .school_name{
+    color: rgb(198, 45, 40);
+    font-family: "Poppins", sans-serif;
+    font-size: 50px;
+    line-height: 45px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.home_about .school_about{
+    color: rgb(122, 122, 122);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400;
+}
+
+.home_about .statistics .icons{
+    font-size: 48px;
+    color: goldenrod;
+    margin-bottom: 20px;   
+}
+
+.home_about .statistics h1{
+    font-size: 50px;
+    color: blue;
+    font-family: "Poppins", sans-serif;
+    font-size: 50px;
+    line-height: 45px;
+    font-weight: 700;
+}
+
+.home_about .statistics p{
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 560px) {
+    .home_about{
+        height: auto;
+    }
+}

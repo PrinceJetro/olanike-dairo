@@ -1,0 +1,72 @@
+.academic-page {
+    background-color: #f9f9f9;
+  }
+  
+.table_div{
+    margin-top: 100px;
+    width: 100%;
+    padding: 10px;
+    overflow-x: auto; /* Enables horizontal scroll on small screens */
+    -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
+    margin-bottom: 20px;
+}
+  .academic-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+  }
+  
+  .academic-table th, .academic-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  
+  .academic-table th {
+    background-color: #7a197f;
+    color: white;
+    font-weight: 700;
+  }
+  
+  .academic-table td ul {
+    padding-left: 15px;
+  }
+  
+  .academic-table td ul li {
+    list-style-type: disc;
+  }
+  
+  .special-events {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: gold;
+  }
+  
+  .special-events ul {
+    padding-left: 20px;
+    font-family: "Poppins", sans-serif;
+    line-height: 28px;
+    font-weight: 400;
+
+  }
+  
+  .special-events ul li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+    list-style-type: disc;
+  }
+  

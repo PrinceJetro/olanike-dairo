@@ -1,9 +1,18 @@
 export default [
-    "https://www.thebalancemoney.com/thmb/iAMMIRNWIRSgPxmoTPBgjvsj2js=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/twice-the-brainpower-on-this-assignment-947895256-5b8c41484cedfd0025f1ec6c.jpg",
-    "https://www.scidev.net/global/wp-content/uploads/2019/08/education_africa_higher_ed_nurses-996x567.jpg",
-    "https://c8.alamy.com/comp/DJ78GK/south-africa-cape-town-guguletu-township-boys-at-work-in-english-intshinga-DJ78GK.jpg",
-    "https://www.inonafrica.com/wp-content/uploads/2024/07/SA-students.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPZsnYQUi-ZVuua7cPAr-2jHuCWUV-K_bWEQ&s",
-    "https://marvelschools.org/wp-content/uploads/2019/12/MG_0133-2.jpg",
-  ];
-  
+  "https://picsum.photos/id/83/200",
+  "https://picsum.photos/id/252/200",
+  "https://picsum.photos/id/456/200",
+  "https://picsum.photos/id/889/200",
+  "https://picsum.photos/id/594/200",
+  "https://picsum.photos/id/443/200",
+  "https://picsum.photos/id/22/200",
+  "https://picsum.photos/id/946/200",
+  "https://picsum.photos/id/576/200",
+  "https://picsum.photos/id/310/200",
+  "https://picsum.photos/id/56/200",
+  "https://picsum.photos/id/367/200",
+  "https://picsum.photos/id/566/200",
+  "https://picsum.photos/id/6/200",
+  "https://picsum.photos/id/189/200",
+  "https://picsum.photos/id/784/200"
+];

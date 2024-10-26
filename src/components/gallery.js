@@ -15,7 +15,7 @@ function EducationGallery() {
 
   return (
     <div className="gallery-container">
-      <h2 className="gallery-title">Our Education Gallery</h2>
+      <h2 className="gallery-title">Our Activity Gallery</h2>
       <div className="gallery-grid">
         {gallery_data.map((image, index) => (
           <img
