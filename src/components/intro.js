@@ -47,8 +47,8 @@ export default function Intro() {
         <div className="div1">
           <h1 className="welcome-header">Welcome to Olanike Dairo Schools</h1>
           <p className="welcome-paragraph">
-            I hope it will give you an insight into the enjoyable life of our school. I appreciate God for affording me the privilege to lead the schools. <br/><br/>
-            As a school, we believe in developing a whole child with emphasis on moral and academic success. I also know the importance of appreciating the wider achievements of our students council where representatives are able to voice their concerns and take responsibility for introducing change within the school.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br/><br/>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </p>
         </div>
         <img src={director_in_office} />
@@ -60,8 +60,8 @@ export default function Intro() {
         <div className="div1">
           <h1 className="coordinator-header">FROM THE COORDINATOR OF Programs</h1>
           <p className="coordinator-paragraph">
-            We have a well-rounded education from crèche to our terminal class in college. Our rich and integrated curricula and a vast array of co-curricular activities enjoyed by our students explain why we are able to do so well. This success is seen in the excellent academic results and high moral rectitude of our students. <br/><br/>
-            Comments from our parents on the quality of education their children receive at Royal King’s Schools rate the school 90%. Our learners are happy, making good academic progress. The teachers are of high quality and seasoned professionals. Parents consider their input in teaching and encouragement of their wards as friendly and great strength.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id tempor elit, nec congue erat. Curabitur elementum eros sed metus gravida, id cursus mi sollicitudin. <br/><br/>
+            Suspendisse vel nulla id magna fermentum lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus suscipit purus id justo facilisis, vel efficitur magna convallis. Duis vitae orci at urna fermentum malesuada. In in odio nec magna consectetur sollicitudin.
           </p>
         </div>
       </div>
@@ -69,7 +69,7 @@ export default function Intro() {
       <div className='school-intro-div'>
       <h1>Our Schools</h1>
       <div>
-      <p>Excellence is not just an act, but a consistent habit of repeated outstanding features. As such, in Royal King’s Schools, the citadel of learning, we are committed to this consistent habit of excellence.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam habitasse platea dictumst. In tincidunt lorem ut sapien luctus, in convallis augue convallis. Fusce ac nisl non mi consequat volutpat. Proin sodales velit sed magna fermentum, vel venenatis felis efficitur.</p>
       </div>
       </div>
 
@@ -79,7 +79,7 @@ export default function Intro() {
         <div className="div1">
           <h1 className="primary-header">Olanike Dairo Primary School</h1>
           <p className="primary-paragraph">
-          At Olanike Dairo Nursery and Primary, we use a modern curriculum that makes learning easy for our students.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus, nunc vel tincidunt egestas, sapien metus bibendum lectus, eget ullamcorper nulla nunc eget nunc.
           </p>
         </div>
       </div>
@@ -89,9 +89,7 @@ export default function Intro() {
             <div className="secondary-div">
         <div className="div1">
           <h1 className="secondary-header">Olanike Dairo Secondary School</h1>
-          <p className="secondary-paragraph">
-          At Olanike Dairo Secondary, we use a modern curriculum that makes learning easy for our students.
-          </p>
+          <p className="secondary-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus, nunc vel tincidunt egestas, sapien metus bibendum lectus, eget ullamcorper nulla nunc eget nunc.</p>
         </div>
         <img src="https://thumbs.dreamstime.com/z/cheerful-teacher-students-portrait-group-multi-ethnic-kids-their-african-american-teacher-english-language-posing-319486900.jpg" alt="secondary" />
       </div>

@@ -4,25 +4,24 @@ import '../styles/testimonial.css'; // Import CSS for styling
 export default function Testimonial() {
   const testimonials = [
     {
-      name: "John Doe",
-      occupation: "Math Teacher",
+      name: "Lorem Ipsum",
+      occupation: "Lorem Teacher",
       image: "https://picsum.photos/id/1011/100",
-      text: "This school has an amazing environment for both teachers and students. I feel supported and valued as part of the team. The facilities are excellent!"
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel gravida nulla. Aenean facilisis, nulla eget consectetur facilisis, neque tortor tristique nunc, nec egestas justo libero sed felis."
     },
     {
-      name: "Jane Smith",
+      name: "Dolor Sit",
       occupation: "Student",
       image: "https://picsum.photos/id/1012/100",
-      text: "I love my school! The teachers are very kind and always ready to help. The curriculum is challenging, and I've learned so much. Highly recommend!"
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tristique elit. Vivamus euismod, nisl sit amet pharetra bibendum, justo massa pellentesque ex, in convallis purus nulla vel odio."
     },
     {
-      name: "Michael Johnson",
+      name: "Amet Consectetur",
       occupation: "Science Teacher",
       image: "https://picsum.photos/id/1013/100",
-      text: "As a science teacher, I am thrilled by the opportunities we offer our students to explore and experiment in state-of-the-art laboratories. This school truly values innovation."
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at purus a dui dapibus elementum in et neque. Sed posuere velit ut lacinia tincidunt."
     }
-  ];
-
+];
   return (
     <div className="testimonial-container">
       {testimonials.map((testimonial, index) => (

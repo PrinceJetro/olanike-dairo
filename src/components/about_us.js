@@ -26,9 +26,10 @@ export default function About_us() {
         <div className="div1">
           <h1 className="about-learn-header">Learn - Explore - Grow</h1>
           <p className="about-learn-paragraph">
-            We have a well-rounded education from crèche to our terminal class in college. Our rich and integrated curricula and a vast array of co-curricular activities enjoyed by our students explain why we are able to do so well. This success is seen in the excellent academic results and high moral rectitude of our students. <br/><br/>
-            Comments from our parents on the quality of education their children receive at Royal King’s Schools rate the school 90%. Our learners are happy, making good academic progress. The teachers are of high quality and seasoned professionals. Parents consider their input in teaching and encouragement of their wards as friendly and great strength.
-          </p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br/><br/>
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Praesent ut ligula egestas erat imperdiet. Curabitur sodales ligula in libero sodales. Proin sagittis, diam sit amet lacinia sagittis, est ligula euismod purus, ut scelerisque felis arcu sit amet felis.
+      </p>
+
         </div>
         <img src={students} />
       </div>
@@ -52,20 +53,19 @@ export default function About_us() {
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis doloremque explicabo autem ab perferendis vero</p>
           </div>
           <div className='bg-light values-div p-3'>
-            <img src={world}/>
-            <h1>Our Mission</h1>
-            <hr />
-            <ul>
-          <li>Godliness</li>
-          <li>Child Centeredness</li>
-          <li>Integrity</li>
-          <li>Self-discipline</li>
-          <li>Consistent excellence</li>
-          <li>Innovation</li>
-          <li>Entrepreneurship</li>
-        </ul>
-          </div>
-
+    <img src={world} />
+    <h1>Our Mission</h1>
+    <hr />
+    <ul>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetur adipiscing elit</li>
+        <li>Sed do eiusmod tempor incididunt</li>
+        <li>Ut labore et dolore magna aliqua</li>
+        <li>Ut enim ad minim veniam</li>
+        <li>Quis nostrud exercitation ullamco</li>
+        <li>Duis aute irure dolor in reprehenderit</li>
+    </ul>
+</div>
         </div>
 
       </div>

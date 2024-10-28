@@ -23,7 +23,7 @@ export default function Home() {
       <div className='home_admission'>
         <div>
         <h1>ADMISSION {new Date().getFullYear() -1} / {new Date().getFullYear()}</h1>
-        <p>The Admission Process is designed to enroll students demonstrating promise. Registration does not imply admission, but it is subject to the availability of seats and fulfilling admission criteria.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, velit eget placerat vulputate, leo metus hendrerit justo, non fringilla nisl felis in ligula. Nulla facilisi. Vestibulum tempus lorem ut elit ullamcorper, at malesuada nulla facilisis.</p>
         <Link to={"/contact"}> <button className="btn text-bright">  Register Your Children Today <FontAwesomeIcon className='arrow-right' icon={faArrowCircleRight}/></button></Link>
         </div>
       </div>

@@ -3,17 +3,13 @@ import "../styles/navbar.css";
 import logo from "../images/logo.png";
 import { Link } from 'react-router-dom';
 
-
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -24,17 +20,33 @@ export default function Navbar() {
     };
   }, []);
 
+  const handleToggle = () => {
+    setIsNavOpen((prev) => !prev);
+  };
+
+  // Determine the background color based on scrolling or nav state
+  const navbarBackgroundColor = isScrolled || isNavOpen ? '#333' : 'transparent';
+
   return (
-    <nav className={`navbar navbar-expand-lg fixed-top p-3 ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className="navbar navbar-expand-lg fixed-top p-3" style={{ backgroundColor: navbarBackgroundColor }}>
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           <img src={logo} alt="School Logo" />
         </Link>
     
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button 
+          className="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navbarNav" 
+          aria-controls="navbarNav" 
+          aria-expanded={isNavOpen} 
+          aria-label="Toggle navigation" 
+          onClick={handleToggle} 
+        >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link className="nav-link" aria-current="page" to="/home">Home</Link>
@@ -55,6 +67,5 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-    
   );
 }

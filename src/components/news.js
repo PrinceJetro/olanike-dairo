@@ -7,30 +7,31 @@ export default function NewsUpdates() {
   // Sample news data
   const newsData = [
     {
-      title: "The Bright Future of Web 3.0?",
-      description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis doloremque explicabo autem ab perferendis vero aliquam cumque tenetur eaque id voluptatibus necessitatibus esse similique iste pariatur aspernatur, aliquid officiis tempora! We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?",
-      image: "https://i.redd.it/random-cool-wallpapers-post45-v0-cpzat5051teb1.jpg?width=2560&format=pjpg&auto=webp&s=92785d2c1336d7a80c566e85efbedb9ef6c78efd",
-      category: "Trending",
+        title: "Lorem ipsum dolor sit amet?",
+        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis doloremque explicabo autem ab perferendis vero aliquam cumque tenetur eaque id voluptatibus necessitatibus esse similique iste pariatur aspernatur, aliquid officiis tempora! We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?",
+        image: "https://myschool.ng/storage/blog/cache/fit_348_218_hMEimc6E9pPgrWz3mJKgLlHNWInELJAcjLCb2eIa.png",
+        category: "Trending",
     },
     {
-      title: "Hydrogen VS Electric Cars",
-      description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis doloremque explicabo autem ab perferendis vero aliquam cumque tenetur eaque id voluptatibus necessitatibus esse similique iste pariatur aspernatur, aliquid officiis tempora! Will hydrogen-fueled cars ever catch up to EVs?",
-      image: "https://images.unsplash.com/photo-1493612276216-ee3925520721?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHJhbmRvbXxlbnwwfHwwfHx8MA%3D%3D",
-      category: "New",
+        title: "Lorem ipsum dolor sit amet?",
+        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis doloremque explicabo autem ab perferendis vero aliquam cumque tenetur eaque id voluptatibus necessitatibus esse similique iste pariatur aspernatur, aliquid officiis tempora! Will hydrogen-fueled cars ever catch up to EVs?",
+        image: "https://bloximages.chicago2.vip.townnews.com/thetimestribune.com/content/tncms/assets/v3/editorial/2/ed/2edbebde-ec11-11ea-9a29-17cf173ad57d/5f4dd76e4af8c.image.jpg?resize=400%2C266",
+        category: "New",
     },
     {
-      title: "The Downsides of AI Artistry",
-      description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis doloremque explicabo autem ab perferendis vero aliquam cumque tenetur eaque id voluptatibus necessitatibus esse similique iste pariatur aspernatur, aliquid officiis tempora! What are the possible adverse effects of on-demand AI image generation?",
-      image: "https://jetros-frontend-mentor-news-homepage.vercel.app/assets/images/image-top-laptops.jpg",
-      category: "Popular",
+        title: "Lorem ipsum dolor sit amet?",
+        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis doloremque explicabo autem ab perferendis vero aliquam cumque tenetur eaque id voluptatibus necessitatibus esse similique iste pariatur aspernatur, aliquid officiis tempora! What are the possible adverse effects of on-demand AI image generation?",
+        image: "https://jetros-frontend-mentor-news-homepage.vercel.app/assets/images/image-top-laptops.jpg",
+        category: "Popular",
     },
     {
-      title: "The Growth of Gaming",
-      description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis doloremque explicabo autem ab perferendis vero aliquam cumque tenetur eaque id voluptatibus necessitatibus esse similique iste pariatur aspernatur, aliquid officiis tempora! How the pandemic has sparked fresh opportunities.",
-      image: "https://jetros-frontend-mentor-news-homepage.vercel.app/assets/images/image-gaming-growth.jpg",
-      category: "Trending",
+        title: "Lorem ipsum dolor sit amet?",
+        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis doloremque explicabo autem ab perferendis vero aliquam cumque tenetur eaque id voluptatibus necessitatibus esse similique iste pariatur aspernatur, aliquid officiis tempora! How the pandemic has sparked fresh opportunities.",
+        image: "https://jetros-frontend-mentor-news-homepage.vercel.app/assets/images/image-gaming-growth.jpg",
+        category: "Trending",
     },
-  ];
+];
+
 
   // Modal state
   const [showModal, setShowModal] = useState(false);
@@ -54,7 +55,7 @@ export default function NewsUpdates() {
       {/* Main News Section */}
       <div className="row">
         <div className="col-sm-8">
-          <img src="https://jetros-frontend-mentor-news-homepage.vercel.app/assets/images/image-web-3-desktop.jpg" alt="Main News" className="img-fluid" />
+          <img src="https://st.depositphotos.com/1152339/3763/i/450/depositphotos_37638271-stock-photo-news-concept-education-news-on.jpg" alt="Main News" className="img-fluid news-image-intro" />
           <div className="row p-2">
             <div className="col-sm-6">
               <h1 className="bright">The Bright Future of Web 3.0?</h1>
@@ -82,7 +83,7 @@ export default function NewsUpdates() {
         {newsData.map((news, index) => (
           <div key={index} className="col-md-4 row">
             <div className="col">
-              <img src={news.image} alt="news" className="img-fluid" />
+              <img src={news.image} alt="news" className="img-fluid news-image" />
             </div>
             <div className="col">
               <h1>{`0${index + 1}`}</h1>
