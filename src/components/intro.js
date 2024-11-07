@@ -3,8 +3,11 @@ import "../styles/intro.css";
 import logo from "../images/logo.png";
 import Navbar from './nav';
 import { Link } from 'react-router-dom';
-import director_in_office from "../images/enhanced/director_in_office.jpg"
-import teacher_and_students_primary from "../images/enhanced/teacher_and_students_primary.jpg"
+import director_in_office from "../images/enhanced/director_in_office.jpg";
+import coordinator from "../images/coordinator.jpg"
+import teacher_and_students_primary from "../images/enhanced/teacher_and_students_primary.jpg";
+import secondary_students_and_teachers from "../images/secondary.jpg";
+
 
 
 
@@ -56,16 +59,16 @@ export default function Intro() {
       </div>
       {/* Coordinator Section */}
       <div className="coordinator-div">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw8ksaf1HR4QnQ9-kOo2YldWfdDW06REWEsQ&s" alt="Coordinator" className="coordinator-image"/>
-    <div className="div1">
-        <h1 className="coordinator-header">From the Coordinator of Programs</h1>
-        <p className="coordinator-paragraph">
-            Welcome to Olanike Dairo Children Centre! We are committed to providing an educational environment where children can thrive. Our philosophy emphasizes the importance of play, hard work, and a solid foundation to ensure that each child grows into a well-rounded individual.
+        <img src={coordinator} className='coordinator-image' />
+        <div className="div1">
+          <h1 className="coordinator-header">FROM THE COORDINATOR OF Programs</h1>
+          <p className="coordinator-paragraph">
+          Welcome to Olanike Dairo Children Centre! We are committed to providing an educational environment where children can thrive. Our philosophy emphasizes the importance of play, hard work, and a solid foundation to ensure that each child grows into a well-rounded individual.
             <br/><br/>
-            Our center offers a nurturing space where creativity and discipline blend, fostering continuous learning in a fun and supportive atmosphere. We take pride in our approach to holistic education, which ensures that each child receives the attention and care they need to excel.
-        </p>
-    </div>
-</div>
+            Our center offers a nurturing space where creativity and discipline blend, fostering continuous learning in a fun and supportive atmosphere. We take pride in our approach to holistic education, which ensures that each child receives the attention and care they need to excel.          </p>
+        </div>
+      </div>
+
 
 
 <div className='school-intro-div'>
@@ -92,7 +95,7 @@ export default function Intro() {
     <h1 className="secondary-header">Olanike Dairo Secondary School</h1>
     <p className="secondary-paragraph">At our secondary school, we offer a comprehensive curriculum designed to prepare students for higher education and the workforce. We focus on academic excellence, character development, and equipping students with the skills necessary to excel in an ever-changing world.</p>
   </div>
-  <img src="https://thumbs.dreamstime.com/z/cheerful-teacher-students-portrait-group-multi-ethnic-kids-their-african-american-teacher-english-language-posing-319486900.jpg" alt="secondary" />
+  <img src={secondary_students_and_teachers} alt="secondary" />
 </div>
 
 

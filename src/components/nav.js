@@ -6,10 +6,22 @@ import { Link } from 'react-router-dom';
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  let lastScrollY = window.scrollY;
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setIsVisible(false); // Hide on scroll up
+      } else {
+        setIsVisible(true); // Show on scroll down
+      }
+      
+      lastScrollY = currentScrollY;
+
+      setIsScrolled(currentScrollY > 50); // Optional background change on scroll
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -28,7 +40,10 @@ export default function Navbar() {
   const navbarBackgroundColor = isScrolled || isNavOpen ? '#333' : 'transparent';
 
   return (
-    <nav className="navbar navbar-expand-lg fixed-top p-3" style={{ backgroundColor: navbarBackgroundColor }}>
+    <nav 
+      className={`navbar navbar-expand-lg fixed-top p-3 ${isVisible ? '' : 'navbar-hidden'}`} 
+      style={{ backgroundColor: navbarBackgroundColor }}
+    >
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           <img src={logo} alt="School Logo" />

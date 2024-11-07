@@ -1,18 +1,30 @@
+import one from "../images/1.jpg";
+import two from "../images/2.jpg";
+import three from "../images/3.jpg";
+import four from "../images/4.jpg";
+import five from "../images/5.jpg";
+import six from "../images/6.jpg";
+import seven from "../images/7.jpg";
+import eight from "../images/8.jpg";
+import nine from "../images/9.jpg";
+import ten from "../images/10.jpg";
+import eleven from "../images/11.jpg";
+import twelve from "../images/12.jpg";
+import thirteen from "../images/13.jpg";
+
 export default [
-  "https://picsum.photos/id/83/200",
-  "https://picsum.photos/id/252/200",
-  "https://picsum.photos/id/456/200",
-  "https://picsum.photos/id/889/200",
-  "https://picsum.photos/id/594/200",
-  "https://picsum.photos/id/443/200",
-  "https://picsum.photos/id/22/200",
-  "https://picsum.photos/id/946/200",
-  "https://picsum.photos/id/576/200",
-  "https://picsum.photos/id/310/200",
-  "https://picsum.photos/id/56/200",
-  "https://picsum.photos/id/367/200",
-  "https://picsum.photos/id/566/200",
-  "https://picsum.photos/id/6/200",
-  "https://picsum.photos/id/189/200",
-  "https://picsum.photos/id/784/200"
+  nine,
+  ten,
+  eleven,
+  twelve,
+  thirteen,
+  one,
+  two,
+  three,
+  four,
+  five,
+  six,
+  seven,
+  eight,
+
 ];

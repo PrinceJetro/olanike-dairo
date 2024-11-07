@@ -35,6 +35,8 @@
   .gallery-image {
     width: 100%;
     height: 200px;
+    object-fit: cover;
+    object-position: top;
     cursor: pointer;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -60,8 +62,14 @@
   
   .gallery-container .modal-content {
     max-width: 80%;
-    max-height: 80%;
+    max-height: 100%;
     border-radius: 10px;
+  }
+
+  .gallery-container .modal img{
+    object-fit: cover;
+    object-position: top center;
+    width: auto;
   }
   
   .close-btn {

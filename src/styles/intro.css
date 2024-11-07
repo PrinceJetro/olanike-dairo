@@ -71,6 +71,7 @@
         text-align: left;
         padding: 20px;
         margin-bottom: 100px;
+        height: auto;
     }    
     .welcome-message-div > div{
         width: 100%;
@@ -100,6 +101,13 @@
     text-align: left;
     height: 700px;
 }
+
+.coordinator-image{
+    object-fit: cover; /* Maintain aspect ratio without stretching */
+    object-position: top;
+
+}
+
 
 .coordinator-div > div{
     width: 45%;
