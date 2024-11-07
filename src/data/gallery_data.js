@@ -5,7 +5,6 @@ import four from "../images/4.jpg";
 import five from "../images/5.jpg";
 import six from "../images/6.jpg";
 import seven from "../images/7.jpg";
-import eight from "../images/8.jpg";
 import nine from "../images/9.jpg";
 import ten from "../images/10.jpg";
 import eleven from "../images/11.jpg";
@@ -25,6 +24,4 @@ export default [
   five,
   six,
   seven,
-  eight,
-
 ];

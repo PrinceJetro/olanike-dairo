@@ -52,6 +52,10 @@
 }
 
 @media screen and (max-width: 560px) {
+    .home_admission{
+        height: auto;
+        padding: 10px;
+    }
     .home_admission div{
         width:100%;
         padding: 10px;

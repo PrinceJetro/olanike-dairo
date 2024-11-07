@@ -2,36 +2,49 @@ import React, { useState } from 'react';
 import '../styles/newsUpdates.css'; // Import the corresponding CSS file for styling
 import Navbar from './nav';
 import Footer from './footer';
+import AnimateOnScroll from './animateOnScroll';
+import education from "../images/education_news.jpg"
+import founders from "../images/founders.png"
+import independence from "../images/independence.png"
+import test from "../images/Summative-Assessments-1.jpg"
+import mid_term from "../images/mid-term.png"
+import year from "../images/end-of-year-party-poster-design-template-b9db5c9afa7bf9045bf4ac7b83485919_screen.jpg"
 
 export default function NewsUpdates() {
   // Sample news data
   const newsData = [
     {
-        title: "Lorem ipsum dolor sit amet?",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis doloremque explicabo autem ab perferendis vero aliquam cumque tenetur eaque id voluptatibus necessitatibus esse similique iste pariatur aspernatur, aliquid officiis tempora! We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?",
-        image: "https://myschool.ng/storage/blog/cache/fit_348_218_hMEimc6E9pPgrWz3mJKgLlHNWInELJAcjLCb2eIa.png",
-        category: "Trending",
+      title: "FOUNDER'S DAY Celebration",
+      description: "Join us as we commemorate our school's rich history and values. A day dedicated to honoring our founder and the legacy they've built for generations of students.",
+      image: founders,
+      category: "Special Event",
     },
     {
-        title: "Lorem ipsum dolor sit amet?",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis doloremque explicabo autem ab perferendis vero aliquam cumque tenetur eaque id voluptatibus necessitatibus esse similique iste pariatur aspernatur, aliquid officiis tempora! Will hydrogen-fueled cars ever catch up to EVs?",
-        image: "https://bloximages.chicago2.vip.townnews.com/thetimestribune.com/content/tncms/assets/v3/editorial/2/ed/2edbebde-ec11-11ea-9a29-17cf173ad57d/5f4dd76e4af8c.image.jpg?resize=400%2C266",
-        category: "New",
+      title: "Independence Day Observance",
+      description: "Celebrate Nigeria's Independence Day on October 1st with activities and reflections on the nation's journey and achievements.",
+      image: independence,
+      category: "National Holiday",
     },
     {
-        title: "Lorem ipsum dolor sit amet?",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis doloremque explicabo autem ab perferendis vero aliquam cumque tenetur eaque id voluptatibus necessitatibus esse similique iste pariatur aspernatur, aliquid officiis tempora! What are the possible adverse effects of on-demand AI image generation?",
-        image: "https://jetros-frontend-mentor-news-homepage.vercel.app/assets/images/image-top-laptops.jpg",
-        category: "Popular",
+      title: "Summative Test Week",
+      description: "The Summative Test, from October 11th to October 18th, will assess students' progress across subjects. Prepare and aim for excellence!",
+      image: test,
+      category: "Academic",
     },
     {
-        title: "Lorem ipsum dolor sit amet?",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis doloremque explicabo autem ab perferendis vero aliquam cumque tenetur eaque id voluptatibus necessitatibus esse similique iste pariatur aspernatur, aliquid officiis tempora! How the pandemic has sparked fresh opportunities.",
-        image: "https://jetros-frontend-mentor-news-homepage.vercel.app/assets/images/image-gaming-growth.jpg",
-        category: "Trending",
+      title: "Mid-Term Break",
+      description: "A chance for students and staff to recharge, from October 28th to November 1st. Use this time for relaxation and reflection before the second half of the term.",
+      image: mid_term,
+      category: "Break",
     },
-];
-
+    {
+      title: "End of Year Party",
+      description: "An exciting celebration marking the end of the academic year. Join us for fun, games, and a memorable end-of-term experience!",
+      image: year,
+      category: "Celebration",
+    },
+  ];
+  
 
   // Modal state
   const [showModal, setShowModal] = useState(false);
@@ -55,7 +68,7 @@ export default function NewsUpdates() {
       {/* Main News Section */}
       <div className="row">
         <div className="col-sm-8">
-          <img src="https://st.depositphotos.com/1152339/3763/i/450/depositphotos_37638271-stock-photo-news-concept-education-news-on.jpg" alt="Main News" className="img-fluid news-image-intro" />
+          <img src={education} alt="Main News" className="img-fluid news-image-intro" />
           <div className="row p-2">
             <div className="col-sm-6">
               <h1 className="bright">The Bright Future of Web 3.0?</h1>

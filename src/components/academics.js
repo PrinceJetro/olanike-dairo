@@ -2,57 +2,122 @@ import React from 'react';
 import '../styles/academicPage.css'; // Optional: add specific styles here;
 import Footer from './footer';
 import Navbar from "./nav"
+import AnimateOnScroll from './animateOnScroll';
+
 
 export default function AcademicPage() {
   // Sample data for the table
   const tableData = [
     {
-      week: "PRE RESUMPTION",
-      date: "1st to 4th September, 2022",
+      date: "6th September, 2024",
       activities: [
-        "1. Lorem ipsum dolor sit amet.",
-        "2. Consectetur adipiscing elit.",
-        "3. Sed do eiusmod tempor incididunt ut labore et dolore.",
-        "4. Ut enim ad minim veniam.",
-        "5. Quis nostrud exercitation ullamco laboris.",
-        "6. Nisi ut aliquip ex ea commodo consequat.",
-        "7. Duis aute irure dolor in reprehenderit.",
-        "8. In voluptate velit esse cillum dolore.",
+        "1. Staff Resume: Preparatory for 1st Term 2024/25",
+        "2. FOUNDER’S DAY"
       ],
-      theme: "Lorem Ipsum Dolor",
+      theme: "Preparation and Founder's Day",
     },
     {
-      week: "1",
-      date: "5th to 9th September, 2022",
+      date: "9th to 13th September, 2024",
       activities: [
-        "1. Excepteur sint occaecat cupidatat non proident.",
-        "2. Sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "3. Ut enim ad minim veniam.",
-        "4. Quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-        "5. Duis aute irure dolor in reprehenderit in voluptate.",
-        "6. Velit esse cillum dolore eu fugiat nulla pariatur.",
-        "7. In voluptate velit esse cillum dolore.",
-        "8. Excepteur sint occaecat cupidatat non proident.",
+        "1. Sales of Books"
       ],
-      theme: "Random Ipsum Theme",
+      theme: "Book Sales Week",
     },
     {
-      week: "2",
-      date: "12th to 16th September, 2022",
+      date: "16th September, 2024",
       activities: [
-        "1. Nulla pariatur excepteur sint occaecat cupidatat.",
-        "2. Sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "3. Lorem ipsum dolor sit amet consectetur.",
-        "4. Adipiscing elit, sed do eiusmod tempor incididunt.",
-        "5. Ut labore et dolore magna aliqua.",
-        "6. Ut enim ad minim veniam quis nostrud exercitation.",
-        "7. Ullamco laboris nisi ut aliquip ex ea commodo.",
-        "8. Duis aute irure dolor in reprehenderit.",
+        "1. School Resumption for 1st Term 2024/25 Academic Sessions",
+        "2. SOCIETY DAY (Every Thursday)"
       ],
-      theme: "Dolor Sit Amet",
+      theme: "School Resumption",
     },
-    // Add more rows here as needed
+    {
+      date: "26th September, 2024",
+      activities: [
+        "1. Gender Assembly/Moral Talks/Counseling (Fortnight Thursday)"
+      ],
+      theme: "Gender Assembly and Moral Talks",
+    },
+    {
+      date: "1st October, 2024",
+      activities: [
+        "1. INDEPENDENCE DAY"
+      ],
+      theme: "Celebration of Independence",
+    },
+    {
+      date: "10th October, 2024",
+      activities: [
+        "1. School's 1st Heads/Sectional Head Meeting",
+      ],
+      theme: "Sectional Meeting and Planning",
+    },
+    {
+      date: "11th to 18th October, 2024",
+      activities: [
+        "1. SUMMATIVE TEST"
+      ],
+      theme: "Assessment Week",
+    },
+    {
+      date: "28th October to 1st November, 2024",
+      activities: [
+        "1. MID-TERM BREAK"
+      ],
+      theme: "Mid-Term Break",
+    },
+    {
+      date: "6th to 7th November, 2024",
+      activities: [
+        "1. OPEN DAY",
+        "2. 2nd School Heads/Sectional Head Meeting"
+      ],
+      theme: "Engagement with Parents",
+    },
+    {
+      date: "18th to 26th November, 2024",
+      activities: [
+        "1. End of Term Examination"
+      ],
+      theme: "Examinations",
+    },
+    {
+      date: "11th December, 2024",
+      activities: [
+        "1. END OF YEAR PARTY"
+      ],
+      theme: "Celebration and Festivities",
+    },
+    {
+      date: "12th December, 2024",
+      activities: [
+        "1. School Closes for Vacation"
+      ],
+      theme: "Vacation",
+    },
+    {
+      date: "13th December, 2024",
+      activities: [
+        "1. END OF TERM"
+      ],
+      theme: "End of Term",
+    },
+    {
+      date: "9th to 10th January, 2025",
+      activities: [
+        "1. Staff Resume"
+      ],
+      theme: "Staff Preparation for New Term",
+    },
+    {
+      date: "13th January, 2025",
+      activities: [
+        "1. Resumption date for 2nd Term 2024/2025"
+      ],
+      theme: "2nd Term Begins",
+    }
   ];
+  
   
 
   return (
@@ -66,7 +131,6 @@ export default function AcademicPage() {
       <table className="academic-table">
         <thead>
           <tr>
-            <th>WEEK</th>
             <th>DATE</th>
             <th>ACTIVITIES</th>
             <th>THEME</th>
@@ -75,7 +139,6 @@ export default function AcademicPage() {
         <tbody>
           {tableData.map((row, index) => (
             <tr key={index}>
-              <td>{row.week}</td>
               <td>{row.date}</td>
               <td>
                 <ul>
@@ -91,20 +154,24 @@ export default function AcademicPage() {
       </table>
       </div>
 
-
-      {/* Special Events/Activities Section */}
+<AnimateOnScroll>
+{/* Special Events/Activities Section */}
 <div className="special-events">
   <h2 className="section-title">Special Events/Activities for the Term</h2>
   <ul>
-    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit – Every Monday</li>
-    <li>Phasellus euismod orci ac ex facilisis, eget ultrices metus malesuada – Every Tuesday</li>
-    <li>Nulla facilisi. Fusce interdum, elit sit amet venenatis sollicitudin – Every 1st Wednesday of every month</li>
-    <li>Curabitur nec justo vitae mauris viverra bibendum – Friday 7th September</li>
-    <li>Suspendisse potenti. Etiam convallis, quam a tempus venenatis – Thursday 12th September, 2022</li>
-    <li>Morbi laoreet nisi in orci vulputate, quis tempor risus tincidunt – Saturday 15th September, 2022</li>
+    <li>FOUNDER’S DAY – Friday, 6th September 2024</li>
+    <li>INDEPENDENCE DAY – Tuesday, 1st October 2024</li>
+    <li>SUMMATIVE TEST – Friday, 11th to Friday, 18th October 2024</li>
+    <li>OPEN DAY – Wednesday and Thursday, 6th & 7th November 2024</li>
+    <li>END OF YEAR PARTY – Wednesday, 11th December 2024</li>
+    <li>School Closes for Vacation – Thursday, 12th December 2024</li>
   </ul>
 </div>
-          <Footer/>
+</AnimateOnScroll>
+
+<AnimateOnScroll><Footer/></AnimateOnScroll>
+
+
     </div>
   );
 }

@@ -6,6 +6,9 @@
 }
 
 
+.intro-home-icon{
+    color: palevioletred;
+}
 .welcome-message-div{
     display: flex;
     flex-wrap: wrap;

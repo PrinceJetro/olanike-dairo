@@ -1,6 +1,7 @@
 import React from 'react';
 import "../styles/footer.css";
 import general from '../data/general';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -11,17 +12,28 @@ function Footer() {
           <h3>Contact Us</h3>
           <p>{general.school_address}</p>
           <p>Phone: {general.school_phone}</p>
-          <p>Email: {general.school_email}</p>
+          <p>Email: <a href={`mailto:${general.school_email}`}>{general.school_email}</a></p>
         </div>
 
         {/* Quick Links */}
         <div className="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#aboutus">About Us</a></li>
-            <li><a href="#admissions">Admissions</a></li>
-            <li><a href="#academics">Academics</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <li>
+              <Link to="/home">Home</Link>
+            </li>
+            <li>
+              <Link  to="/about">About Us</Link>
+            </li>
+            <li>
+              <Link  to="/academics">Academics</Link>
+            </li>
+            <li>
+              <Link  to="/contact">Contact</Link>
+            </li>
+            <li>
+              <Link  to="/news">News and Updates</Link>
+            </li>
           </ul>
         </div>
 

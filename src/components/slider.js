@@ -35,7 +35,7 @@ function ImageSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       goToNext();
-    }, 3000); // Change every 3 seconds
+    }, 7000); // Change every 7 seconds
 
     // Clean up the interval when the component unmounts
     return () => clearInterval(interval);

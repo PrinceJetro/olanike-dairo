@@ -3,6 +3,8 @@ import "../styles/intro.css";
 import logo from "../images/logo.png";
 import Navbar from './nav';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 import director_in_office from "../images/enhanced/director_in_office.jpg";
 import coordinator from "../images/coordinator.jpg"
 import teacher_and_students_primary from "../images/enhanced/teacher_and_students_primary.jpg";
@@ -37,6 +39,9 @@ export default function Intro() {
       <div className="container-fluid">
         <Link className="navbar-brand" to="/home">
           <img src={logo} alt="School Logo" />
+        </Link>
+        <Link className="navbar-brand" to="/home">
+        <FontAwesomeIcon className='intro-home-icon' icon={faHome} />
         </Link>
       </div>
     </nav>

@@ -8,6 +8,8 @@ import ManagementTeam from './management_team';
 import Footer from './footer';
 import students from "../images/students_in_class1.jpg"
 import students2 from "../images/students_in_class2.jpg"
+import AnimateOnScroll from './animateOnScroll';
+
 
 export default function About_us() {
   return (
@@ -18,6 +20,7 @@ export default function About_us() {
         </div>
         
       {/* about-learn Section */}
+      <AnimateOnScroll>
       <div className="about-learn-div">
         <div className="div1">
           <h1 className="about-learn-header">Learn - Explore - Grow</h1>
@@ -28,8 +31,10 @@ export default function About_us() {
         </div>
         <img src={students} />
       </div>
+      </AnimateOnScroll>
 
       {/* Core Values */}
+      <AnimateOnScroll>
       <div className='core_values'>
         <div className='core-values-text-div'>
           <h1>Our Values</h1>
@@ -38,6 +43,7 @@ export default function About_us() {
             We embrace diversity, encourage open-mindedness, and strive to provide opportunities for everyone to succeed.
           </p>
         </div>
+        <AnimateOnScroll>
         <div className='core-values-value-div'>
           <div>
             <FontAwesomeIcon className='awesome' icon={faBriefcase} />
@@ -66,10 +72,16 @@ export default function About_us() {
             </ul>
           </div>
         </div>
+        </AnimateOnScroll>
       </div>
-
+      </AnimateOnScroll>
+      
+      <AnimateOnScroll>
       <ManagementTeam />
+      </AnimateOnScroll>
+      <AnimateOnScroll>
       <Footer />
+      </AnimateOnScroll>
     </div>
   );
 }

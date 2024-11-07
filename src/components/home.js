@@ -11,6 +11,8 @@ import Footer from './footer';
 import Testimonial from './testimonial';
 import EducationGallery from './gallery';
 import { Link } from 'react-router-dom';
+import AnimateOnScroll from './animateOnScroll';
+
 
 
 export default function Home() {
@@ -18,8 +20,13 @@ export default function Home() {
     <div className="container-fluid p-0 m-0 home">
       <Navbar/>
       <ImageSlider/>
+      <AnimateOnScroll>
       <Home_about/>
+      </AnimateOnScroll>
+      <AnimateOnScroll>
       <Why_us/>
+      </AnimateOnScroll>
+      <AnimateOnScroll>
       <div className='home_admission'>
   <div>
     <h1>ADMISSION {new Date().getFullYear() - 1} / {new Date().getFullYear()}</h1>
@@ -31,11 +38,12 @@ export default function Home() {
     </Link>
   </div>
 </div>
+</AnimateOnScroll>
 
-      <GetInTouch/>
-      <EducationGallery/>
-      <Testimonial/>
-      <Footer/>
+      <AnimateOnScroll><GetInTouch/></AnimateOnScroll>
+      <AnimateOnScroll><EducationGallery/></AnimateOnScroll>
+      <AnimateOnScroll><Testimonial/></AnimateOnScroll>
+      <AnimateOnScroll><Footer/></AnimateOnScroll>
     </div>
   );
 }
