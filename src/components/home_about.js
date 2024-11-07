@@ -32,14 +32,13 @@ export default function Home_about() {
     <div className="home_about row" ref={ref}>
       {/* Left side content: school description */}
       <div className="col-md-6 col-sm-12">
-        <h1 className="school_name">Olanike Dairo Schools</h1>
-        <p className="school_about">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repellat laudantium esse quisquam voluptas maxime nam, voluptatum similique assumenda magni autem aliquid maiores earum? Molestias sit asperiores recusandae esse nisi!a
-          <br /><br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repellat laudantium esse quisquam voluptas maxime nam, voluptatum similique assumenda magni autem aliquid maiores earum? Molestias sit asperiores recusandae esse nisi!a
-        </p>
-      </div>
-
+  <h1 className="school_name">Olanike Dairo Schools</h1>
+  <p className="school_about">
+    Olanike Dairo Primary School and Olanike Dairo Secondary School are dedicated to providing quality education in an inclusive and nurturing environment. We aim to foster growth and development in every student, preparing them for future success through dedicated teaching and community engagement.
+    <br /><br />
+    Our primary school focuses on building a strong foundation for students through a well-rounded curriculum. Emphasis is placed on developing critical thinking skills, creativity, and a love for learning. The school strives to create an environment where each child can flourish academically and socially.
+  </p>
+</div>
       {/* Right side content: statistics */}
       <div className="col-md-6 col-sm-12 row statistics">
         <StatisticCard

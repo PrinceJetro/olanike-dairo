@@ -47,52 +47,53 @@ export default function Intro() {
         <div className="div1">
           <h1 className="welcome-header">Welcome to Olanike Dairo Schools</h1>
           <p className="welcome-paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br/><br/>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </p>
+          At Olanike Dairo Children Centre, we are committed to nurturing the future of our children by embracing the philosophy of <strong>"learning through play and hard work."</strong> This approach allows for continuous and unconscious learning while also fostering the values of discipline and respect. Our goal is to create well-rounded children who are equipped with the essential skills and values for lifelong success.
+            <br/><br/>
+            Our unique environment encourages each child to explore, grow, and develop not only intellectually but also socially, emotionally, and morally. We believe in shaping a total child, ensuring they leave our care as confident, respectful, and responsible individuals ready to face the world.          </p>
+
         </div>
         <img src={director_in_office} />
       </div>
-
       {/* Coordinator Section */}
       <div className="coordinator-div">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw8ksaf1HR4QnQ9-kOo2YldWfdDW06REWEsQ&s" alt="Coordinator" />
-        <div className="div1">
-          <h1 className="coordinator-header">FROM THE COORDINATOR OF Programs</h1>
-          <p className="coordinator-paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id tempor elit, nec congue erat. Curabitur elementum eros sed metus gravida, id cursus mi sollicitudin. <br/><br/>
-            Suspendisse vel nulla id magna fermentum lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus suscipit purus id justo facilisis, vel efficitur magna convallis. Duis vitae orci at urna fermentum malesuada. In in odio nec magna consectetur sollicitudin.
-          </p>
-        </div>
-      </div>
-
-      <div className='school-intro-div'>
-      <h1>Our Schools</h1>
-      <div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam habitasse platea dictumst. In tincidunt lorem ut sapien luctus, in convallis augue convallis. Fusce ac nisl non mi consequat volutpat. Proin sodales velit sed magna fermentum, vel venenatis felis efficitur.</p>
-      </div>
-      </div>
-
-            {/* Primary Section */}
-            <div className="primary-div">
-        <img src={teacher_and_students_primary} alt="primary" />
-        <div className="div1">
-          <h1 className="primary-header">Olanike Dairo Primary School</h1>
-          <p className="primary-paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus, nunc vel tincidunt egestas, sapien metus bibendum lectus, eget ullamcorper nulla nunc eget nunc.
-          </p>
-        </div>
-      </div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw8ksaf1HR4QnQ9-kOo2YldWfdDW06REWEsQ&s" alt="Coordinator" className="coordinator-image"/>
+    <div className="div1">
+        <h1 className="coordinator-header">From the Coordinator of Programs</h1>
+        <p className="coordinator-paragraph">
+            Welcome to Olanike Dairo Children Centre! We are committed to providing an educational environment where children can thrive. Our philosophy emphasizes the importance of play, hard work, and a solid foundation to ensure that each child grows into a well-rounded individual.
+            <br/><br/>
+            Our center offers a nurturing space where creativity and discipline blend, fostering continuous learning in a fun and supportive atmosphere. We take pride in our approach to holistic education, which ensures that each child receives the attention and care they need to excel.
+        </p>
+    </div>
+</div>
 
 
-            {/* secondary Section */}
-            <div className="secondary-div">
-        <div className="div1">
-          <h1 className="secondary-header">Olanike Dairo Secondary School</h1>
-          <p className="secondary-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus, nunc vel tincidunt egestas, sapien metus bibendum lectus, eget ullamcorper nulla nunc eget nunc.</p>
-        </div>
-        <img src="https://thumbs.dreamstime.com/z/cheerful-teacher-students-portrait-group-multi-ethnic-kids-their-african-american-teacher-english-language-posing-319486900.jpg" alt="secondary" />
-      </div>
+<div className='school-intro-div'>
+  <h1>Our Schools</h1>
+  <div>
+    <p>Olanike Dairo Primary School and Olanike Dairo Secondary School are dedicated to providing quality education in an inclusive and nurturing environment. We aim to foster growth and development in every student, preparing them for future success through dedicated teaching and community engagement.</p>
+  </div>
+</div>
+
+{/* Primary Section */}
+<div className="primary-div">
+  <img src={teacher_and_students_primary} alt="primary" />
+  <div className="div1">
+    <h1 className="primary-header">Olanike Dairo Primary School</h1>
+    <p className="primary-paragraph">
+      Our primary school focuses on building a strong foundation for students through a well-rounded curriculum. Emphasis is placed on developing critical thinking skills, creativity, and a love for learning. The school strives to create an environment where each child can flourish academically and socially.
+    </p>
+  </div>
+</div>
+
+{/* Secondary Section */}
+<div className="secondary-div">
+  <div className="div1">
+    <h1 className="secondary-header">Olanike Dairo Secondary School</h1>
+    <p className="secondary-paragraph">At our secondary school, we offer a comprehensive curriculum designed to prepare students for higher education and the workforce. We focus on academic excellence, character development, and equipping students with the skills necessary to excel in an ever-changing world.</p>
+  </div>
+  <img src="https://thumbs.dreamstime.com/z/cheerful-teacher-students-portrait-group-multi-ethnic-kids-their-african-american-teacher-english-language-posing-319486900.jpg" alt="secondary" />
+</div>
 
 
       <footer>

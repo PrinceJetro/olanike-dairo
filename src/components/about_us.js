@@ -9,14 +9,10 @@ import Footer from './footer';
 import students from "../images/students_in_class1.jpg"
 import students2 from "../images/students_in_class2.jpg"
 
-
-
-
-
 export default function About_us() {
   return (
     <div className="container-fluid p-0 m-0 about_us">
-      <Navbar/>
+      <Navbar />
         <div className='about_us_intro'>
             <h1>About Us</h1>
         </div>
@@ -26,57 +22,54 @@ export default function About_us() {
         <div className="div1">
           <h1 className="about-learn-header">Learn - Explore - Grow</h1>
           <p className="about-learn-paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br/><br/>
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Praesent ut ligula egestas erat imperdiet. Curabitur sodales ligula in libero sodales. Proin sagittis, diam sit amet lacinia sagittis, est ligula euismod purus, ut scelerisque felis arcu sit amet felis.
-      </p>
-
+            We are a team dedicated to providing excellent educational experiences. Our mission is to make learning accessible, engaging, and impactful for students worldwide. Through innovative teaching methods and interactive resources, we aim to foster growth and development in every individual. <br/><br/>
+            Our vision is to empower learners to explore new opportunities, acquire critical skills, and achieve their goals in a rapidly changing world. We believe in the transformative power of education and are committed to providing high-quality learning experiences that inspire and motivate.
+          </p>
         </div>
         <img src={students} />
       </div>
+
       {/* Core Values */}
       <div className='core_values'>
         <div className='core-values-text-div'>
           <h1>Our Values</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis doloremque explicabo autem ab perferendis vero aliquam cumque tenetur eaque id voluptatibus necessitatibus esse similique iste pariatur aspernatur, aliquid officiis tempora! <br/> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis doloremque explicabo autem ab perferendis vero aliquam cumque tenetur eaque id voluptatibus necessitatibus esse similique iste pariatur aspernatur, aliquid officiis tempora!</p>
+          <p>
+            At our core, we believe in the power of knowledge, collaboration, and innovation. We value integrity, responsibility, and excellence in all that we do. Our commitment to creating inclusive and dynamic learning environments drives our approach to teaching and engagement. <br/>
+            We embrace diversity, encourage open-mindedness, and strive to provide opportunities for everyone to succeed.
+          </p>
         </div>
         <div className='core-values-value-div'>
           <div>
-            <FontAwesomeIcon className='awesome' icon={faBriefcase}/>
+            <FontAwesomeIcon className='awesome' icon={faBriefcase} />
             <h1>Our Vision</h1>
             <hr />
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis doloremque explicabo autem ab perferendis vero</p>
+            <p>Our vision is to create a world where everyone has access to the tools and resources they need to achieve their dreams through learning and development.</p>
           </div>
           <div>
-          <FontAwesomeIcon className='awesome' icon={faMagnifyingGlass}/>
-          <h1>Our Vision</h1>
+            <FontAwesomeIcon className='awesome' icon={faMagnifyingGlass} />
+            <h1>Our Mission</h1>
             <hr />
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis doloremque explicabo autem ab perferendis vero</p>
+            <p>Our mission is to deliver an innovative, accessible, and supportive learning experience that helps individuals discover their potential and make a lasting impact on the world.</p>
           </div>
           <div className='bg-light values-div p-3'>
-    <img src={world} />
-    <h1>Our Mission</h1>
-    <hr />
-    <ul>
-        <li>Lorem ipsum dolor sit amet</li>
-        <li>Consectetur adipiscing elit</li>
-        <li>Sed do eiusmod tempor incididunt</li>
-        <li>Ut labore et dolore magna aliqua</li>
-        <li>Ut enim ad minim veniam</li>
-        <li>Quis nostrud exercitation ullamco</li>
-        <li>Duis aute irure dolor in reprehenderit</li>
-    </ul>
-</div>
+            <img src={world} />
+            <h1>Our Mission</h1>
+            <hr />
+            <ul>
+                <li>Empower individuals to succeed in their personal and professional lives</li>
+                <li>Foster a culture of continuous learning and growth</li>
+                <li>Provide high-quality resources and support for learners of all backgrounds</li>
+                <li>Encourage innovation, creativity, and critical thinking</li>
+                <li>Support collaboration and teamwork in achieving shared goals</li>
+                <li>Promote inclusivity and diversity in learning environments</li>
+                <li>Inspire positive change through education</li>
+            </ul>
+          </div>
         </div>
-
       </div>
 
-      <ManagementTeam/>
-      <Footer/>
-
-
-
-
-
+      <ManagementTeam />
+      <Footer />
     </div>
   );
 }
