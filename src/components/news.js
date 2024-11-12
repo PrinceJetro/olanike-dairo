@@ -4,6 +4,7 @@ import Navbar from './nav';
 import Footer from './footer';
 import AnimateOnScroll from './animateOnScroll';
 import education from "../images/education_news.jpg"
+import mariene from "../images/students-at-marine.jpg"
 import founders from "../images/founders.png"
 import independence from "../images/independence.png"
 import test from "../images/Summative-Assessments-1.jpg"
@@ -13,6 +14,12 @@ import year from "../images/end-of-year-party-poster-design-template-b9db5c9afa7
 export default function NewsUpdates() {
   // Sample news data
   const newsData = [
+    {
+      title: "Students Participate in 5th National Virtual Marine and Blue Economy Quiz",
+      description: "We are thrilled to announce that students from our school recently took part in the prestigious 5th National Virtual Marine and Blue Economy Quiz Competition. This event, organized by the Ocean Ambassadors Foundation, brought together over 1,000 high school students from across the nation to explore exciting career opportunities within the maritime industry and to deepen their knowledge of the blue economy. The competition emphasizes sustainability and inclusivity, encouraging a new generation of talent, especially young women, to pursue careers in the marine sector.",
+      image: mariene, 
+      category: "School Achievements",
+    },    
     {
       title: "FOUNDER'S DAY Celebration",
       description: "Join us as we commemorate our school's rich history and values. A day dedicated to honoring our founder and the legacy they've built for generations of students.",
@@ -67,44 +74,51 @@ export default function NewsUpdates() {
         <Navbar/>
       {/* Main News Section */}
       <div className="row">
-        <div className="col-sm-8">
-          <img src={education} alt="Main News" className="img-fluid news-image-intro" />
-          <div className="row p-2">
-            <div className="col-sm-6">
-              <h1 className="bright">The Bright Future of Web 3.0?</h1>
-            </div>
-            <div className="col-sm-6">
-              <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
-            </div>
-          </div>
-        </div>
+    {/* Main News Section */}
+    <div className="col-lg-8 col-md-7 col-sm-12 mb-4">
+        <img src={education} alt="Main News" className="img-fluid news-image-intro" />
+        <div className="row p-2">
+        <div className="col-md-6 col-sm-12">
+    <h1 className="bright">Celebrating Academic Excellence and Growth</h1>
+</div>
+<div className="col-md-6 col-sm-12">
+    <p>Join us as we highlight the latest achievements, events, and initiatives that empower our students and foster a thriving learning community. Stay informed on how we’re building a brighter future together!</p>
+</div>
 
-        <div className="col-sm-3 bg-dark new">
-          <h1>NEW</h1>
-          {newsData.slice(0, 3).map((news, index) => (
-            <div key={index}>
-              <h3>{news.title}</h3>
-              <p>{news.description.slice(0, 100)}...</p>
-              <hr />
-            </div>
-          ))}
         </div>
-      </div>
+    </div>
+
+    {/* Sidebar News Section */}
+    <div className="col-lg-4 col-md-5 col-sm-12 bg-dark new mb-4">
+        <h1>NEW</h1>
+        {newsData.slice(0, 3).map((news, index) => (
+            <div key={index}>
+                <h3>{news.title}</h3>
+                <p>{news.description.slice(0, 100)}...</p>
+                <hr />
+            </div>
+        ))}
+    </div>
+</div>
+
 
       {/* Smaller News Cards Section */}
       <div className="row down">
         {newsData.map((news, index) => (
-          <div key={index} className="col-md-4 row">
-            <div className="col">
+      <div key={index} className="col-lg-4 col-md-6 col-sm-12 mb-4">
+      <div className="row">
+          <div className="col-4">
               <img src={news.image} alt="news" className="img-fluid news-image" />
-            </div>
-            <div className="col">
+          </div>
+          <div className="col-8">
               <h1>{`0${index + 1}`}</h1>
               <h3>{news.title}</h3>
               <p>{news.description.slice(0, 100)}...</p> {/* Limit the description to 100 characters */}
               <button id="readmore" onClick={() => openModal(news)}>Read more</button>
-            </div>
           </div>
+      </div>
+  </div>
+  
         ))}
       </div>
 
