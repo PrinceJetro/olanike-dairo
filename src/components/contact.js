@@ -35,7 +35,7 @@ export default function Contact(){
         .then(data => {
             console.log('Your Data Has Been Successfully Uploaded', data);
             // Update state or perform any other action if needed
-            alert("Class Successfully Booked");
+            alert("Form Submitted Successfully");
             document.getElementById("submit_btn").innerHTML="Submit"
             document.getElementById("submit_btn").disabled = false        
             document.getElementById("submit_btn").style.backgroundColor ="transparent"
