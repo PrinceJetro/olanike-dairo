@@ -4,22 +4,19 @@ import '../styles/testimonial.css'; // Import CSS for styling
 export default function Testimonial() {
   const testimonials = [
     {
-      name: "Lorem Ipsum",
-      occupation: "Lorem Teacher",
-      image: "https://picsum.photos/id/1011/100",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel gravida nulla. Aenean facilisis, nulla eget consectetur facilisis, neque tortor tristique nunc, nec egestas justo libero sed felis."
+      name: "Bilikisu Olabimpe",
+      image: "https://i.pinimg.com/736x/0d/64/98/0d64989794b1a4c9d89bff571d3d5842.jpg",
+      text: "Amazing school, I would recommend to any parent looking for a school with high educational standards"
     },
     {
-      name: "Dolor Sit",
-      occupation: "Student",
-      image: "https://picsum.photos/id/1012/100",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac tristique elit. Vivamus euismod, nisl sit amet pharetra bibendum, justo massa pellentesque ex, in convallis purus nulla vel odio."
+      name: "Wura Ola",
+      image: "https://i.pinimg.com/736x/0d/64/98/0d64989794b1a4c9d89bff571d3d5842.jpg",
+      text: "Quality education  this the place to be. Committed and dedicated teachers. Hardworking non teaching staff"
     },
     {
-      name: "Amet Consectetur",
-      occupation: "Science Teacher",
-      image: "https://picsum.photos/id/1013/100",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at purus a dui dapibus elementum in et neque. Sed posuere velit ut lacinia tincidunt."
+      name: "Kenny Dosunmu",
+      image: "https://i.pinimg.com/736x/0d/64/98/0d64989794b1a4c9d89bff571d3d5842.jpg",
+      text: "I Was Once An Old Student Of This Best And Great School🌎🙏 And I Am Proud To Say Your Child Would Definitely Get A Qualitative Education There🥇🏆📚"
     }
 ];
   return (

@@ -56,14 +56,7 @@ function Footer() {
           </div>
         </div>
 
-        {/* Newsletter */}
-        <div className="footer-section">
-          <h3>Subscribe to our Newsletter</h3>
-          <form className="newsletter-form">
-            <input type="email" placeholder="Your email" required />
-            <button type="submit">Subscribe</button>
-          </form>
-        </div>
+    
       </div>
 
       <div className="footer-bottom">

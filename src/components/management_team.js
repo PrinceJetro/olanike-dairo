@@ -1,28 +1,36 @@
 import React from 'react';
 import '../styles/managementTeam.css'; // Assuming we use a separate CSS file for styling
+import mrsBimpe from "../images/enhanced/mrsBimpe.jpg"
+import mrsewumi from "../images/enhanced/mrsewumi.jpg"
+import mrsyeouna from "../images/enhanced/mrsyeouna.jpg"
+import msawotoruvbe from "../images/enhanced/msawotoruvbe.jpg"
+
+
+
+
+
+
 
 export default function ManagementTeam() {
   // Array of teachers
   const teachers = [
     {
-      name: 'Mr. John Doe',
-      post: 'Head of Science Department',
-      image: 'https://www.listchallenges.com/f/items/4a49d146-da0e-4940-826c-cad7d1a4919c.jpg',
+      name: 'MS BIMPE ADEJUNMOBI',
+      post: 'ADMINISTRATOR',
+      image: mrsBimpe,
     },
     {
-      name: 'Ms. Jane Smith',
-      post: 'Head of Mathematics Department',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT519fFp6RYLFkNi_pWWapEISb-HbZx-TRL3A&s',
+      name: 'MRS S.O YEOUNA',
+      image: mrsyeouna,
     },
     {
-      name: 'Dr. Richard Miles',
-      post: 'Head of Arts Department',
-      image: 'https://www.listchallenges.com/f/items/6b5978c7-4467-4689-8358-945c88045798.jpg',
+      name: 'MRS F. EWUMI',
+      post: 'SECONDARY AND ACCOUNT',
+      image: mrsewumi,
     },
     {
-      name: 'Mrs. Angela White',
-      post: 'Head of Physical Education',
-      image: 'https://www.jetpunk.com/img/user-img/72/728c815558-450.webp',
+      name: 'MS M.M AWOTORUVBE',
+      image: msawotoruvbe,
     },
   ];
 
@@ -39,15 +47,6 @@ export default function ManagementTeam() {
             <p className="teacher-post">{teacher.post}</p>
           </div>
         ))}
-      </div>
-
-      {/* Group Picture of All Teachers */}
-      <div className="all-teachers">
-        <img
-          src="https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?cs=srgb&dl=pexels-fauxels-3184398.jpg&fm=jpg" // Replace with the group picture of all teachers
-          alt="All Teachers"
-          className="group-image"
-        />
       </div>
     </div>
   );

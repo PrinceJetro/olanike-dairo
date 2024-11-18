@@ -1,39 +1,45 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from 'react';
 import "../styles/gallery.css";
 import gallery_data from "../data/gallery_data";
 
 function EducationGallery() {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const galleryContainerRef = useRef(null);
+  const [scrollDirection, setScrollDirection] = useState(1); // 1 for forward, -1 for backward
 
-  const openModal = (image) => {
-    setSelectedImage(image);
-  };
+  useEffect(() => {
+    const galleryContainer = galleryContainerRef.current;
+    const galleryScrollWidth = galleryContainer.scrollWidth;
 
-  const closeModal = () => {
-    setSelectedImage(null);
-  };
+    const intervalId = setInterval(() => {
+      if (scrollDirection === 1) {
+        if (galleryContainer.scrollLeft + galleryContainer.clientWidth < galleryScrollWidth) {
+          galleryContainer.scrollTo(galleryContainer.scrollLeft + 1, 0);
+        } else {
+          setScrollDirection(-1);
+        }
+      } else {
+        if (galleryContainer.scrollLeft > 0) {
+          galleryContainer.scrollTo(galleryContainer.scrollLeft - 1, 0);
+        } else {
+          setScrollDirection(1);
+        }
+      }
+    }, 10);
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(intervalId);
+  }, [scrollDirection]); // Re-run the effect when scrollDirection changes
 
   return (
-    <div className="gallery-container">
+    <div className="horizontal-gallery-container">
       <h2 className="gallery-title">Our Activity Gallery</h2>
-      <div className="gallery-grid">
-        {gallery_data.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Gallery ${index + 1}`}
-            className="gallery-image"
-            onClick={() => openModal(image)}
-          />
+      <div className="gallery-row" ref={galleryContainerRef}>
+        {gallery_data.map((item, index) => (
+          <div className="gallery-item" key={index}>
+            <img src={item} alt={`Olanike Dairo Gallery Item ${index + 1}`} />
+          </div>
         ))}
       </div>
-
-      {selectedImage && (
-        <div className="modal" onClick={closeModal}>
-          <span className="close-btn">&times;</span>
-          <img src={selectedImage} alt="Enlarged" className="modal-content" />
-        </div>
-      )}
     </div>
   );
 }

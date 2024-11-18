@@ -123,7 +123,7 @@ export default function AcademicPage() {
   return (
     <div className="academic-page">
       <Navbar/>
-          <div className='about_us_intro'>
+          <div className='academic_intro'>
             <h1>Academics</h1>
         </div>
       

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/GetInTouch.css";
 import general from "../data/general";
+import get_in_touch from "../images/pexels-alex-andrews-271121-821754.jpg"
 
 function GetInTouch() {
   const [formData, setFormData] = useState({
@@ -33,7 +34,7 @@ function GetInTouch() {
 
       <div className="get-in-touch-content">
         <div className="number_container">
-          <img src="https://africa-school-bucket3.s3.amazonaws.com/static/img/school/2022/01/28/univelcity.jpg"/>
+          <img src={get_in_touch}/>
           <h1 className="number_container_text">Call Now: {general.school_phone} </h1>
         </div>
        

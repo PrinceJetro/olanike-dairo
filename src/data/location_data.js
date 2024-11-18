@@ -7,14 +7,14 @@ export default [
         img: primaryschool,
         location: "Primary School",
         str: "32 Strachan street off Igbosere Road, Lagos Island, Lagos",
-        tel: "(102) 6666 8888",
+        tel: "234 806 644 4188",
         mail: "olanikedairocentre@gmail.com"
     },
     {
         img: secondaryschool,
         location: "Secondary School",
         str: " 13 Strachan lane off Strachan street, Lagos Island, Lagos",
-        tel: "(102) 6666 8888",
+        tel: "234 802 302 4062",
         mail: "olanikedairocentre@gmail.com"
     },
 ]
