@@ -11,7 +11,7 @@ export default function Testimonial() {
     {
       name: "Wura Ola",
       image: "https://images.pexels.com/photos/2764976/pexels-photo-2764976.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      text: "Quality education  this the place to be. Committed and dedicated teachers. Hardworking non teaching staff"
+      text: "Quality education, this is the place to be. Committed and dedicated teachers. Hardworking non teaching staff"
     },
     {
       name: "Kenny Dosunmu",

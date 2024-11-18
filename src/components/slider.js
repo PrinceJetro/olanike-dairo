@@ -14,7 +14,7 @@ const slides = [
   {
     url: students_in_bus,
     title: "School Bus Ride",
-    description: "Students enjoying a safe journey to school on the bus.",
+    description: "Pupils enjoying a safe journey to school on the bus.",
   },
   {
     url: students_in_computer_lab,
