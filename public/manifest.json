@@ -1,19 +1,19 @@
 {
-  "short_name": "School Website Template",
-  "name": "PrinceJetro School Website Template",
+  "short_name": "Olanike Dairo",
+  "name": "Olanike Dairo Children Center",
   "icons": [
     {
-      "src": "front_64.jpg",
+      "src": "logo64.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "front_192.jpg",
+      "src": "logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "front_512.jpg",
+      "src": "logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

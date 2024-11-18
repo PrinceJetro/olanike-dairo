@@ -11,8 +11,8 @@ function Footer() {
         <div className="footer-section">
           <h3>Contact Us</h3>
           <p>{general.school_address}</p>
-          <p>Phone: {general.school_phone}</p>
-          <p>Email: <a href={`mailto:${general.school_email}`}>{general.school_email}</a></p>
+          <p>Phone: <a href={`tel:${general.school_phone}`} style={{color:"white"}} >{general.school_phone}</a></p>
+          <p>Email: <a href={`mailto:${general.school_email}`} style={{color:"white"}} >{general.school_email}</a></p>
         </div>
 
         {/* Quick Links */}
