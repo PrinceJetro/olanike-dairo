@@ -35,7 +35,7 @@ function GetInTouch() {
       <div className="get-in-touch-content">
         <div className="number_container">
           <img src={get_in_touch}/>
-          <h1 className="number_container_text">Call Now: {general.school_phone} </h1>
+          <h1 className="number_container_text">Call Now: <a style={{color:"white", textDecoration:"none"}} href={`tel:${general.school_phone}`}>{general.school_phone}</a> </h1>
         </div>
        
 

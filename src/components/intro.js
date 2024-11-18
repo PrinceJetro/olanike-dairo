@@ -76,7 +76,7 @@ export default function Intro() {
 
 
 
-<div className='school-intro-div'>
+<div className='school-intro-div mt-4'>
   <h1>Our Schools</h1>
   <div>
     <p>Olanike Dairo Primary School and Olanike Dairo Secondary School are dedicated to providing quality education in an inclusive and nurturing environment. We aim to foster growth and development in every student, preparing them for future success through dedicated teaching and community engagement.</p>

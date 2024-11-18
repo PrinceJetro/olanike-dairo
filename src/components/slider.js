@@ -9,7 +9,7 @@ const slides = [
   {
     url: students_in_class,
     title: "Classroom Learning",
-    description: "Students engaged in focused learning inside the classroom.",
+    description: "Pupils engaged in focused learning inside the classroom.",
   },
   {
     url: students_in_bus,

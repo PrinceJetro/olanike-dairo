@@ -3,9 +3,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: 450px;
     text-align: center;
-    background-color: rgb(177, 92, 74);
+    background-color: #b15c4a;
 }
 
 .home_admission div{
@@ -31,7 +31,7 @@
 }
 
 .home_admission .btn {
-    background-color: blue;
+    background-color:  rgb(233, 49, 12);
     color: white;
     display: flex; /* Enable flexbox */
     justify-content: center; /* Center content horizontally */
@@ -39,16 +39,20 @@
     padding: 10px 20px; /* Add some padding */
     border: none; /* Remove default border */
     border-radius: 5px; /* Optional: Round the button's corners */
-    font-size: 1rem; /* Adjust font size */
+    font-size: 1.5rem; /* Adjust font size */
     margin: auto;
   }
   
   
 .home_admission .btn .arrow-right{
     color: white;
-    background-color: blue;
+    background-color: #b15c4a;
     font-size: 24px;
     margin-left: 8px; /* Add some spacing between text and icon */
+}
+
+.home_admission a{
+    text-decoration: none;
 }
 
 @media screen and (max-width: 560px) {
