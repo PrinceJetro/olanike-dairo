@@ -127,6 +127,7 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }   
     .about-learn-div >img{
         height: auto;

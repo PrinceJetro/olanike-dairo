@@ -107,10 +107,10 @@ export default function NewsUpdates() {
         {newsData.map((news, index) => (
       <div key={index} className="col-lg-4 col-md-6 col-sm-12 mb-4">
       <div className="row">
-          <div className="col-4">
+          <div className="col-6">
               <img src={news.image} alt="news" className="img-fluid news-image" />
           </div>
-          <div className="col-8">
+          <div className="col-6">
               <h1>{`0${index + 1}`}</h1>
               <h3>{news.title}</h3>
               <p>{news.description.slice(0, 100)}...</p> {/* Limit the description to 100 characters */}

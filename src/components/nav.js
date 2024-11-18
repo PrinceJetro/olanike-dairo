@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "../styles/navbar.css";
-import logo from "../images/logo.png";
+import logo from "../images/logoremoved.png";
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {

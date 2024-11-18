@@ -19,12 +19,12 @@
     background-color: #333;
   }
   
-  @media screen and (max-width: 680px) {
+  @media screen and (max-width: 900px) {
     .navbar-toggler {
       background-color: whitesmoke;
     }
     .navbar-toggler-icon {
-      background-color: rgb(63, 62, 62);
+      background-color: whitesmoke;
     }
   }
   
