@@ -66,7 +66,7 @@ export default function Intro() {
       <div className="coordinator-div">
         <img src={coordinator} className='coordinator-image' />
         <div className="div1">
-          <h1 className="coordinator-header">FROM THE COORDINATOR OF Programs</h1>
+          <h1 className="coordinator-header">THE PRINCIPAL</h1>
           <p className="coordinator-paragraph">
           Welcome to Olanike Dairo Children Centre! We are committed to providing an educational environment where children can thrive. Our philosophy emphasizes the importance of play, hard work, and a solid foundation to ensure that each child grows into a well-rounded individual.
             <br/><br/>

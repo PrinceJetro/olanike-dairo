@@ -29,7 +29,7 @@ export default function Home() {
       <AnimateOnScroll>
       <div className='home_admission'>
   <div>
-    <h1>ADMISSION {new Date().getFullYear() - 1} / {new Date().getFullYear()}</h1>
+    <h1>ADMISSION {new Date().getFullYear()} / {new Date().getFullYear() + 1}</h1>
     <p>Olanike Dairo Schools offer a well-rounded educational experience for children of all ages. Our primary school lays the foundation for lifelong learning, while our secondary school prepares students for their next step in life, whether in further education or the workforce. We offer a nurturing, challenging, and inclusive environment to help each child reach their full potential. Join our family and be a part of a community that values academic excellence and personal growth.</p>
     <Link to={"/contact"}>
       <button className="btn text-bright">

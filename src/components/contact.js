@@ -70,8 +70,8 @@ export default function Contact(){
         <img src={item.img} />
         <h1 className="location_header">{item.location}</h1>
         <p className="street"> <i className="fa fa-map-marker mr-3"></i>{item.str} </p>
-        <p className="phone"> <i className="fa fa-phone mr-3"></i> <a href={`tel:${item.tel}`}>{item.tel}</a> </p>
-        <p className="email"> <i className="fa fa-envelope mr-3"></i> <a href={`mailto:${item.mail}`}>{item.mail}</a> </p>
+        <p className="phone"> <i className="fa fa-phone mr-3"></i> <a style={{textDecoration:"none"}} href={`tel:${item.tel}`}>{item.tel}</a> </p>
+        <p className="email"> <i className="fa fa-envelope mr-3"></i> <a style={{textDecoration:"none"}} href={`mailto:${item.mail}`}>{item.mail}</a> </p>
     </div>
 
     ))
@@ -95,7 +95,8 @@ export default function Contact(){
                     </div>
                     <div>
                         <h3>OPEN HOURS</h3>
-                        <p>Daily 9:00-20:00</p>
+                        <p>Monday to Thursdays: <br/>7:30am to 2:30pm</p>
+                        <p>Friday: <br/>7:30am to 1:00 pm </p>
                     </div>
 
                 </div>

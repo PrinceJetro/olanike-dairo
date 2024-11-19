@@ -11,8 +11,8 @@ function Footer() {
         <div className="footer-section">
           <h3>Contact Us</h3>
           <p>{general.school_address}</p>
-          <p>Phone: <a href={`tel:${general.school_phone}`} style={{color:"white"}} >{general.school_phone}</a></p>
-          <p>Email: <a href={`mailto:${general.school_email}`} style={{color:"white"}} >{general.school_email}</a></p>
+          <p>Phone: <a href={`tel:${general.school_phone}`} style={{color:"white", textDecoration:"none"}} >{general.school_phone}</a></p>
+          <p>Email: <a href={`mailto:${general.school_email}`} style={{color:"white",textDecoration:"none"}} >{general.school_email}</a></p>
         </div>
 
         {/* Quick Links */}
@@ -61,6 +61,7 @@ function Footer() {
 
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} {general.school_name}. All rights reserved.</p>
+        <p>Designed by <a href='https://princejetro.vercel.app' target='_blank' style={{color:"white",textDecoration:"none"}} >PrinceJetro</a>.</p>
       </div>
     </footer>
   );

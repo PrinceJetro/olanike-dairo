@@ -43,20 +43,20 @@ export default function Home_about() {
       <div className="col-md-6 col-sm-12 row statistics">
         <StatisticCard
           icon={faAward}
-          value={500}
-          title="Students"
+          value={1000}
+          title="Learners Impacted"
           isVisible={isVisible}
         />
         <StatisticCard
           icon={faSchool}
-          value={45}
-          title="Classrooms"
+          value={3}
+          title="Centers of Discovery"
           isVisible={isVisible}
         />
         <StatisticCard
           icon={faChalkboardTeacher}
           value={50}
-          title="Teachers"
+          title="Inspiring Mentors"
           isVisible={isVisible}
         />
       </div>
