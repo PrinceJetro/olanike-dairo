@@ -29,6 +29,10 @@
     margin-right: 20px;
 }
 
+.admin{
+    color: rgb(198, 45, 40);
+    font-weight: 700;
+}
 .welcome-header{
     color: rgb(198, 45, 40);
     font-family: "Poppins", sans-serif;
@@ -51,7 +55,7 @@
     align-self: left;
     font-weight: 400;
     margin: 0px;
-    word-break: break-all;
+    word-break: keep-all;
     padding: 0%;
 }
 
@@ -145,7 +149,7 @@
     align-self: left;
     font-weight: 400;
     margin: 0px;
-    word-break: break-all;
+    word-break: keep-all;
     padding: 0%;
 }
 

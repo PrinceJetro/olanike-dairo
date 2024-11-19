@@ -1,7 +1,7 @@
 .why_us {
   display: flex;
   justify-content: center;
-  background-color: rgb(46, 40, 40);
+  background-color: rgb(143, 56, 53);
   flex-wrap: wrap
 }
 
@@ -23,7 +23,7 @@ color: rgb(112, 112, 112);
 
 .why_us > div h3{
 font-size: 24px;
-color: rgb(35, 35, 35);
+color: rgb(198, 45, 40);
 padding-bottom: 16px;
 padding-top: 16px;
 font-family: "Poppins", sans-serif;

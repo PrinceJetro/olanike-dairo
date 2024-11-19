@@ -90,7 +90,7 @@ export default function NewsUpdates() {
 
     {/* Sidebar News Section */}
     <div className="col-lg-4 col-md-5 col-sm-12 bg-dark new mb-4">
-        <h1>NEW</h1>
+        <h1>NEWS</h1>
         {newsData.slice(0, 3).map((news, index) => (
             <div key={index}>
                 <h3>{news.title}</h3>

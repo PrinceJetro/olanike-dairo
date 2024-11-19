@@ -59,10 +59,10 @@ export default function About_us() {
           </div>
           <div className='bg-light values-div p-3'>
             <img src={world} />
-            <h1>Our Mission</h1>
+            <h1>Goals</h1>
             <hr />
             <ul>
-                <li>Empower individuals to succeed in their personal and professional lives</li>
+                <li>Empower individuals to succeed in their personal and academic lives</li>
                 <li>Foster a culture of continuous learning and growth</li>
                 <li>Provide high-quality resources and support for learners of all backgrounds</li>
                 <li>Encourage innovation, creativity, and critical thinking</li>

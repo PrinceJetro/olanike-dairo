@@ -7,7 +7,7 @@ export default [
   {
     icon: "fa fa-graduation-cap",
     head: "OUTSTANDING RESULTS",
-    text: "Our primary school focuses on building a strong foundation for students through a well-rounded curriculum. Emphasis is placed on developing critical thinking skills, creativity, and a love for learning. The secondary school also maintains high academic standards and prepares students for higher education and future careers."
+    text: "Our primary school builds a strong foundation, with students excelling in common entrance exams. The secondary school upholds high standards, with outstanding results in WAEC and JAMB, preparing students for future success."
   },
   {
     icon: "fa fa-flask",

@@ -57,7 +57,7 @@ export default function Intro() {
           <p className="welcome-paragraph">
           At Olanike Dairo Children Centre, we are committed to nurturing the future of our children by embracing the philosophy of <strong>"learning through play and hard work."</strong> This approach allows for continuous and unconscious learning while also fostering the values of discipline and respect. Our goal is to create well-rounded children who are equipped with the essential skills and values for lifelong success.
             <br/><br/>
-            Our unique environment encourages each child to explore, grow, and develop not only intellectually but also socially, emotionally, and morally. We believe in shaping a total child, ensuring they leave our care as confident, respectful, and responsible individuals ready to face the world.          </p>
+            Our unique environment encourages each child to explore, grow, and develop not only intellectually but also socially, emotionally, and morally. We believe in shaping a total child, ensuring they leave our care as confident, respectful, and responsible individuals ready to face the world. <br/><br/> <span className='admin'>By the Admin.</span>          </p>
 
         </div>
         <img src={director_in_office} />
