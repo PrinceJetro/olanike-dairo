@@ -5,6 +5,8 @@ import students_in_bus from "../images/enhanced/students in the school bus mod.j
 import students_in_computer_lab from "../images/enhanced/students in computer lab.jpg";
 import students_in_chemistry_lab from "../images/enhanced/students in chemistry lab.jpg";
 import nursery from "../images/nursery.jpg";
+import fineart from "../images/fineart.jpg"
+import homeecons from "../images/homeecons.jpg"
 
 const slides = [
   {
@@ -21,6 +23,16 @@ const slides = [
     url: students_in_bus,
     title: "School Bus Ride",
     description: "Pupils enjoying a safe journey to school on the bus.",
+  },
+  {
+    "url": fineart,
+    "title": "Fine Art Studio",
+    "description": "Students working creatively on various art projects."
+  },
+  {
+    "url": homeecons,
+    "title": "Home Economics Laboratory",
+    "description": "Students learning practical skills such as sewing."
   },
   {
     url: students_in_computer_lab,

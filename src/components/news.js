@@ -5,7 +5,7 @@ import Footer from './footer';
 import AnimateOnScroll from './animateOnScroll';
 import education from "../images/education_news.jpg"
 import mariene from "../images/students-at-marine.jpg"
-import founders from "../images/founders.png"
+import founders from "../images/thefounder.jpg"
 import independence from "../images/independence.png"
 import test from "../images/Summative-Assessments-1.jpg"
 import mid_term from "../images/mid-term.png"
@@ -126,7 +126,7 @@ export default function NewsUpdates() {
       {showModal && selectedNews && (
         <div className="modal">
           <div className="modal-content">
-            <span className="close" onClick={closeModal}>&times;</span>
+          <span className="close " onClick={closeModal}>&times;</span>
             <img src={selectedNews.image} alt={selectedNews.title} className="modal-image" />
             <h2>{selectedNews.title}</h2>
             <p>{selectedNews.description}</p>
