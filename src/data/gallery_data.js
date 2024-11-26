@@ -20,7 +20,7 @@ import g7 from "../images/g7.jpg";
 import g8 from "../images/g8.jpg";
 import g9 from "../images/g9.jpg";
 import g10 from "../images/g10.jpg";
-import g11 from "../images/g11.jpg";
+import g11 from "../images/graduants.jpg";
 import g12 from "../images/g12.jpg";
 import g13 from "../images/g13.jpg";
 

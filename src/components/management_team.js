@@ -4,6 +4,7 @@ import mrsBimpe from "../images/enhanced/mrsBimpe.jpg"
 import mrsewumi from "../images/enhanced/management/6.jpg"
 import Animashaun from "../images/enhanced/management/5.jpg"
 import sanusi from "../images/enhanced/management/3.jpg"
+import principal from "../images/enhanced/management/principal.jpg"
 
 
 
@@ -16,7 +17,7 @@ export default function ManagementTeam() {
   const teachers = [
     {
       name: 'MS BIMPE ADEJUNMOBI',
-      post: 'ADMINISTRATOR',
+      post: 'Administrator',
       image: mrsBimpe,
     },
     {
@@ -26,7 +27,7 @@ export default function ManagementTeam() {
     },
     {
       name: 'MRS F. EWUMI',
-      post: 'SECONDARY AND ACCOUNT',
+      post: 'Secondary School and Accountant',
       image: mrsewumi,
     },
     {
@@ -49,6 +50,14 @@ export default function ManagementTeam() {
             <p className="teacher-post">{teacher.post}</p>
           </div>
         ))}
+      </div>
+       {/* Group Picture of All Teachers */}
+       <div className="all-teachers">
+        <img
+          src={principal} // Replace with the group picture of all teachers
+          alt="Olanike dairo"
+          className="group-image"
+        />
       </div>
     </div>
   );

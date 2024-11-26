@@ -4,12 +4,18 @@ import students_in_class from "../images/enhanced/students_in_class.jpg";
 import students_in_bus from "../images/enhanced/students in the school bus mod.jpg";
 import students_in_computer_lab from "../images/enhanced/students in computer lab.jpg";
 import students_in_chemistry_lab from "../images/enhanced/students in chemistry lab.jpg";
+import nursery from "../images/nursery.jpg";
 
 const slides = [
   {
     url: students_in_class,
     title: "Classroom Learning",
     description: "Pupils engaged in focused learning inside the classroom.",
+  },
+  {
+    url: nursery,
+    title: "Nursery Class",
+    description: "The foundational class where young children begin their learning journey, building essential skills for future education.",
   },
   {
     url: students_in_bus,
