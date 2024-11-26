@@ -11,6 +11,7 @@ function Footer() {
         <div className="footer-section">
           <h3>Contact Us</h3>
           <p>{general.school_address}</p>
+          <p>32 Strachan St, Obalende, Lagos Island, Lagos 102273, Lagos</p>
           <p>Phone: <a href={`tel:${general.school_phone}`} style={{color:"white", textDecoration:"none"}} >{general.school_phone}</a></p>
           <p>Email: <a href={`mailto:${general.school_email}`} style={{color:"white",textDecoration:"none"}} >{general.school_email}</a></p>
         </div>

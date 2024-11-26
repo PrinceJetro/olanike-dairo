@@ -1,9 +1,9 @@
 import React from 'react';
 import '../styles/managementTeam.css'; // Assuming we use a separate CSS file for styling
 import mrsBimpe from "../images/enhanced/mrsBimpe.jpg"
-import mrsewumi from "../images/enhanced/mrsewumi.jpg"
-import mrsyeouna from "../images/enhanced/mrsyeouna.jpg"
-import msawotoruvbe from "../images/enhanced/msawotoruvbe.jpg"
+import mrsewumi from "../images/enhanced/management/6.jpg"
+import Animashaun from "../images/enhanced/management/5.jpg"
+import sanusi from "../images/enhanced/management/3.jpg"
 
 
 
@@ -20,8 +20,9 @@ export default function ManagementTeam() {
       image: mrsBimpe,
     },
     {
-      name: 'MRS S.O YEOUNA',
-      image: mrsyeouna,
+      name: 'MRS F.I Animashaun',
+      image: Animashaun,
+      post: "Asst. Headmistress Primary Section"
     },
     {
       name: 'MRS F. EWUMI',
@@ -29,8 +30,9 @@ export default function ManagementTeam() {
       image: mrsewumi,
     },
     {
-      name: 'MS M.M AWOTORUVBE',
-      image: msawotoruvbe,
+      name: 'Mrs R. A. Sanusi',
+      image: sanusi,
+      post: "Headmistress Primary Section"
     },
   ];
 
