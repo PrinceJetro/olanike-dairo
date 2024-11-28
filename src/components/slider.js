@@ -7,6 +7,7 @@ import students_in_chemistry_lab from "../images/enhanced/students in chemistry 
 import nursery from "../images/nursery.jpg";
 import fineart from "../images/fineart.jpg"
 import homeecons from "../images/homeecons.jpg"
+import library from "../images/library.jpg"
 
 const slides = [
   {
@@ -28,6 +29,11 @@ const slides = [
     "url": fineart,
     "title": "Fine Art Studio",
     "description": "Students working creatively on various art projects."
+  },
+  {
+    "url": library,
+    "title": "Library",
+    "description": "Students reading quietly in the Library"
   },
   {
     "url": homeecons,
