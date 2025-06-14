@@ -23,6 +23,9 @@ import g10 from "../images/g10.jpg";
 import g11 from "../images/graduants.jpg";
 import g12 from "../images/g12.jpg";
 import g13 from "../images/g13.jpg";
+import playground1 from "../images/playground1.jpg";
+import playground2 from "../images/playground2.jpg";
+import playground3 from "../images/playground3.jpg";
 
 
 export default [
@@ -51,4 +54,7 @@ export default [
   g3,
   six,
   seven,
+  playground1,
+  playground2,
+  playground3,
 ];
