@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Our Founder | Olanike Dairo — Visionary of Holistic Education</title>
+    <link rel="icon" href="images/logoremoved.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-deep: #1E2A5E;
+            --primary-vibrant: #2D3E7B;
+            --accent-coral: #FF6B6B;
+            --accent-soft: #FFE9E9;
+            --highlight-blue: #3B82F6;
+            --gold-accent: #F59E0B;
+            --white: #FFFFFF;
+            --gray-50: #F8FAFC;
+            --gray-200: #E2E8F0;
+            --text-dark: #0F172A;
+            --text-muted: #475569;
+            --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05);
+            --shadow-md: 0 20px 25px -12px rgba(0,0,0,0.1);
+            --transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            --serif: 'Playfair Display', serif;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--white);
+            color: var(--text-dark);
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ========= NAVIGATION ========= */
+        .navbar {
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(4px);
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .logo img { height: 52px; width: auto; object-fit: contain; }
+        .nav-menu { display: flex; gap: 2rem; list-style: none; align-items: center; }
+        .nav-link { text-decoration: none; font-weight: 600; color: var(--text-dark); transition: 0.2s; font-size: 0.95rem; }
+        .nav-link:hover, .nav-link.active { color: var(--highlight-blue); }
+        .btn-apply-nav {
+            background: var(--highlight-blue);
+            color: white !important;
+            padding: 0.5rem 1.3rem;
+            border-radius: 40px;
+        }
+        .btn-apply-nav:hover { background: var(--primary-deep); transform: scale(0.97); }
+        .menu-toggle { display: none; font-size: 1.7rem; cursor: pointer; color: var(--primary-deep); }
+
+        /* ========= FOUNDER HERO SECTION (PREMIUM) ========= */
+        .founder-hero {
+            min-height: 85vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 4rem 5%;
+            gap: 3rem;
+            background: linear-gradient(135deg, #FEF9F5 0%, #FFFFFF 100%);
+        }
+        .hero-img-box {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        .hero-img-box::before {
+            content: '';
+            position: absolute;
+            width: 85%;
+            height: 85%;
+            background: var(--primary-deep);
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            z-index: 1;
+            opacity: 0.1;
+        }
+        .hero-img-box img {
+            width: 85%;
+            max-width: 450px;
+            border-radius: 2rem;
+            position: relative;
+            z-index: 2;
+            box-shadow: 30px 30px 0 var(--accent-soft);
+            object-fit: cover;
+        }
+        .hero-text .sub {
+            color: var(--highlight-blue);
+            letter-spacing: 3px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .hero-text h1 {
+            font-size: 4rem;
+            color: var(--primary-deep);
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-family: var(--serif);
+            font-style: italic;
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            background: var(--primary-deep);
+            color: white;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .btn-primary:hover { background: var(--highlight-blue); transform: translateY(-3px); }
+
+        /* ========= BIOGRAPHY TIMELINE (REFINED) ========= */
+        .biography {
+            padding: 5rem 5%;
+            background: var(--gray-50);
+        }
+        .bio-container { max-width: 1100px; margin: 0 auto; }
+        .story-block {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        .story-year {
+            flex: 0 0 180px;
+            font-family: var(--serif);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--highlight-blue);
+            padding-top: 0.5rem;
+        }
+        .story-card {
+            background: white;
+            padding: 2rem 2.5rem;
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border-left: 5px solid var(--primary-deep);
+        }
+        .story-card h3 { font-size: 1.6rem; color: var(--primary-deep); margin-bottom: 1rem; }
+        .story-card p { color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; }
+        .story-card .callout {
+            border-left: 3px solid var(--gold-accent);
+            padding-left: 1.2rem;
+            font-style: italic;
+            color: #5b6e8c;
+            margin-top: 1rem;
+        }
+
+        /* ========= MESSAGE SECTION (VIDEO + TEXT) ========= */
+        .message-section {
+            padding: 5rem 5%;
+            background: white;
+        }
+        .message-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .video-placeholder {
+            background: linear-gradient(145deg, var(--primary-deep), #2c3e78);
+            border-radius: 1.8rem;
+            height: 360px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .video-placeholder i { font-size: 4rem; color: white; margin-bottom: 1rem; }
+        .video-placeholder span { color: rgba(255,255,255,0.9); font-weight: 500; }
+        .message-text .sub-title { color: var(--highlight-blue); font-weight: 700; letter-spacing: 2px; }
+        .message-text h2 { font-size: 2.2rem; color: var(--primary-deep); margin: 1rem 0; }
+        .message-text p { font-size: 1.1rem; color: var(--text-muted); line-height: 1.7; font-family: var(--serif); }
+
+        /* ========= LEGACY & ACHIEVEMENTS ========= */
+        .legacy-section {
+            padding: 5rem 5%;
+            background: var(--gray-50);
+        }
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+        }
+        .section-header .subhead { color: var(--highlight-blue); font-weight: 700; letter-spacing: 2px; }
+        .section-header h2 { font-size: 2.2rem; color: var(--primary-deep); margin-top: 0.5rem; }
+        .legacy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .legacy-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1.2rem;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+        .legacy-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-bottom: 3px solid var(--highlight-blue); }
+        .legacy-card i { font-size: 2.5rem; color: var(--primary-deep); margin-bottom: 1rem; }
+        .legacy-card h4 { font-size: 1.3rem; margin-bottom: 0.8rem; }
+
+        /* ========= FINAL PHILOSOPHY QUOTE ========= */
+        .philosophy-quote {
+            background: var(--primary-deep);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        .quote-inner { max-width: 800px; margin: 0 auto; }
+        .quote-inner i { font-size: 3rem; color: var(--gold-accent); margin-bottom: 1.5rem; display: inline-block; }
+        .quote-inner blockquote { font-size: 1.7rem; font-family: var(--serif); line-height: 1.4; margin-bottom: 1.5rem; }
+        .quote-inner .signature { font-weight: 700; letter-spacing: 1.5px; font-size: 1rem; }
+
+        /* ========= FOOTER (PROFESSIONAL & COMPLETE) ========= */
+        footer {
+            background: #0B132B;
+            color: #ddd;
+            padding: 3rem 5% 1.5rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer-col h4 { color: white; margin-bottom: 1.2rem; font-size: 1.1rem; font-weight: 600; }
+        .footer-col a, .footer-col p { color: #bbb; text-decoration: none; display: block; margin-bottom: 0.6rem; transition: 0.2s; font-size: 0.9rem; }
+        .footer-col a:hover { color: var(--highlight-blue); transform: translateX(3px); }
+        .social-icons a { font-size: 1.3rem; margin-right: 1rem; display: inline-block; }
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #2d3748;
+            padding-top: 1.5rem;
+            font-size: 0.8rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        .designer-tag { color: var(--gold-accent); font-weight: 600; }
+
+        @media (max-width: 992px) {
+            .nav-menu { display: none; flex-direction: column; position: absolute; top: 80px; left: 0; width: 100%; background: white; padding: 1.5rem; box-shadow: 0 20px 30px rgba(0,0,0,0.1); gap: 1rem; z-index: 999; }
+            .nav-menu.active { display: flex; }
+            .menu-toggle { display: block; }
+            .founder-hero { grid-template-columns: 1fr; text-align: center; padding: 3rem 5%; }
+            .hero-text h1 { font-size: 3rem; }
+            .story-block { flex-direction: column; gap: 1rem; }
+            .story-year { flex-basis: auto; text-align: left; font-size: 1.5rem; }
+            .message-grid { grid-template-columns: 1fr; }
+            .quote-inner blockquote { font-size: 1.3rem; }
+        }
+        @media (max-width: 640px) {
+            .hero-img-box img { width: 100%; }
+            .story-card { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="images/logoremoved.png" alt="Olanike Dairo Logo">
+    </div>
+    <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="academics.html" class="nav-link">Academics</a></li>
+        <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+        <li><a href="founder.html" class="nav-link active">Founder</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="student-life.html" class="nav-link">Student Life</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="mobileToggle"><i class="fas fa-bars"></i></div>
+</nav>
+
+<!-- FOUNDER HERO SECTION -->
+<section class="founder-hero">
+    <div class="hero-img-box">
+        <img src="images/founderimage.png" alt="Founder Olanike Dairo">
+    </div>
+    <div class="hero-text">
+        <span class="sub">THE VISIONARY</span>
+        <h1>Olanike<br>Dairo</h1>
+        <p>"Transforming education by nurturing the 'total child' through the powerful blend of Play & Hard Work."</p>
+        <a href="#messageFromFounder" class="btn-primary">Message from Olanike Dairo <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
+
+<!-- BIOGRAPHY TIMELINE -->
+<section class="biography">
+    <div class="bio-container">
+        <div class="story-block">
+            <div class="story-year">The Calling</div>
+            <div class="story-card">
+                <h3>Foundations of Purpose</h3>
+                <p>Born and raised in Lagos, Olanike Dairo witnessed firsthand the gaps in traditional education — where rote learning overshadowed creativity. Her early years as a volunteer teacher ignited a deep passion: to create a space where every child's innate curiosity is celebrated. She pursued advanced studies in Educational Psychology, determined to reshape how young minds engage with knowledge.</p>
+                <div class="callout">"Education isn't about filling a bucket; it's about lighting a fire that burns for a lifetime."</div>
+            </div>
+        </div>
+
+        <div class="story-block">
+            <div class="story-year">The Vision</div>
+            <div class="story-card">
+                <h3>Seeing a Future of Possibility</h3>
+                <p>After years of research and observing both local and international best practices, Olanike synthesized a unique pedagogical model: blending disciplined academics with unstructured, curiosity-driven play. She envisioned a school where students would not only excel in exams but also grow emotionally, socially, and ethically — a true "total child" approach.</p>
+            </div>
+        </div>
+
+        <div class="story-block">
+            <div class="story-year">The Birth</div>
+            <div class="story-card">
+                <h3>A School is Born</h3>
+                <p>In 2008, with just a handful of students and an unwavering belief, Olanike Dairo Children Centre opened its doors in Obalende. The early days were demanding, but the radical results — joyful, confident learners — spoke for themselves. Soon, the school expanded from a nursery to a full-fledged primary and secondary institution, becoming a beacon of holistic education in Lagos Island.</p>
+            </div>
+        </div>
+
+        <div class="story-block">
+            <div class="story-year">The Legacy</div>
+            <div class="story-card">
+                <h3>Growth & Lasting Impact</h3>
+                <p>Today, Olanike Dairo Schools stands as a testament to one woman's vision. With over 1,200 alumni excelling in universities and careers worldwide, the school's philosophy of "Play & Hard Work" has influenced a generation. Beyond academics, the institution remains deeply rooted in community upliftment, offering scholarships and mentorship programs across Obalende and beyond.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MESSAGE SECTION (VIDEO + TEXT) -->
+<section id="messageFromFounder" class="message-section">
+    <div class="message-grid">
+        <div class="video-placeholder">
+            <i class="fas fa-play-circle"></i>
+            <span>Welcome Message from the Founder</span>
+            <small style="margin-top: 0.5rem; opacity: 0.7;">(Video address)</small>
+        </div>
+        <div class="message-text">
+            <span class="sub-title">A Direct Address</span>
+            <h2>A Heartfelt Welcome</h2>
+            <p>"Welcome to the community of Olanike Dairo Schools. My dream was always to provide a place where learning happened unconsciously, where a child’s natural curiosity was the curriculum, but where the values of hard work were instilled early. I am so proud that today, my vision lives on in every student who walks through our gates. Together, we are shaping leaders who will transform Nigeria and the world."</p>
+            <p style="margin-top: 1rem; font-weight: 500;">— Olanike Dairo, Founder</p>
+        </div>
+    </div>
+</section>
+
+<!-- LEGACY & ACHIEVEMENTS -->
+<section class="legacy-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="subhead">Recognition & Footprint</span>
+            <h2>A Legacy in Action</h2>
+            <p>Accolades that reflect decades of dedication to transformative education.</p>
+        </div>
+        <div class="legacy-grid">
+            <div class="legacy-card">
+                <i class="fas fa-certificate"></i>
+                <h4>State Approval & Excellence</h4>
+                <p>Fully accredited by the Lagos State Ministry of Education, with consistent outstanding inspection reports and regulatory compliance.</p>
+            </div>
+            <div class="legacy-card">
+                <i class="fas fa-medal"></i>
+                <h4>Educational Innovation Award</h4>
+                <p>Recipient of the "Holistic Education Pioneer" award for integrating STEAM, creative arts, and character development into the core curriculum.</p>
+            </div>
+            <div class="legacy-card">
+                <i class="fas fa-seedling"></i>
+                <h4>Community Impact Leadership</h4>
+                <p>Over 15 years of outreach, free holiday coaching, and scholarship programs benefiting hundreds of children in the Obalende community.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL PHILOSOPHY QUOTE -->
+<section class="philosophy-quote">
+    <div class="quote-inner">
+        <i class="fas fa-quote-right"></i>
+        <blockquote>"My mission is simple: to deliver an innovative, accessible, and supportive learning experience that helps individuals discover their potential and make a lasting impact on the world."</blockquote>
+        <div class="signature">— Olanike Dairo, Founder & Director</div>
+    </div>
+</section>
+
+<!-- FOOTER (COMPLETE & PROFESSIONAL) -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-map-marker-alt"></i> 2 Strachan St, Obalende, Lagos Island, Lagos 102273</p>
+            <p><i class="fas fa-map-marker-alt"></i> 32 Strachan St, Obalende, Lagos Island, Lagos 102273</p>
+            <p><i class="fas fa-phone"></i> 02013424038</p>
+            <p><i class="fas fa-envelope"></i> olanikedairocentre@gmail.com</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="academics.html">Academics</a>
+            <a href="admissions.html">Admissions</a>
+            <a href="founder.html">Founder</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="student-life.html">Student Life</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Olanike Dairo Schools. All rights reserved.</p>
+        <p>Designed by <span class="designer-tag"><a href="https://www.princejetro.com.ng/" target="_blank" rel="noopener noreferrer">PrinceJetro</a></span>.</p>
+    </div>
+</footer>
+
+<script>
+    // MOBILE MENU TOGGLE
+    const toggleBtn = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    }
+    // Optional: set active nav based on current page
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === 'founder.html' || (link.innerText.includes('Founder'))) {
+            link.classList.add('active');
+        }
+    });
+    // simple video placeholder interaction
+    const videoBox = document.querySelector('.video-placeholder');
+    if(videoBox) {
+        videoBox.addEventListener('click', () => {
+            alert("🎥 Full video message will be available soon. Stay tuned for an inspiring address from our Founder.");
+        });
+    }
+</script>
+</body>
+</html>

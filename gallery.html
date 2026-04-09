@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Gallery | Olanike Dairo Schools — Moments & Milestones</title>
+    <link rel="icon" href="images/logoremoved.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-deep: #1E2A5E;
+            --primary-vibrant: #2D3E7B;
+            --accent-coral: #FF6B6B;
+            --accent-soft: #FFE9E9;
+            --highlight-blue: #3B82F6;
+            --gold-accent: #F59E0B;
+            --white: #FFFFFF;
+            --gray-50: #F8FAFC;
+            --gray-200: #E2E8F0;
+            --text-dark: #0F172A;
+            --text-muted: #475569;
+            --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05);
+            --shadow-md: 0 20px 25px -12px rgba(0,0,0,0.1);
+            --transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--white);
+            color: var(--text-dark);
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ========= NAVIGATION (CONSISTENT) ========= */
+        .navbar {
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(4px);
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .logo img { height: 52px; width: auto; object-fit: contain; }
+        .nav-menu { display: flex; gap: 2rem; list-style: none; align-items: center; }
+        .nav-link { text-decoration: none; font-weight: 600; color: var(--text-dark); transition: 0.2s; font-size: 0.95rem; }
+        .nav-link:hover, .nav-link.active { color: var(--highlight-blue); }
+        .btn-apply-nav {
+            background: var(--highlight-blue);
+            color: white !important;
+            padding: 0.5rem 1.3rem;
+            border-radius: 40px;
+        }
+        .btn-apply-nav:hover { background: var(--primary-deep); transform: scale(0.97); }
+        .menu-toggle { display: none; font-size: 1.7rem; cursor: pointer; color: var(--primary-deep); }
+
+        /* ========= HERO SECTION ========= */
+        .gallery-hero {
+            background: linear-gradient(135deg, rgba(30,42,94,0.88), rgba(45,62,123,0.85)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80') center/cover;
+            padding: 5rem 2rem;
+            text-align: center;
+            color: white;
+        }
+        .gallery-hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .gallery-hero p { font-size: 1.2rem; opacity: 0.9; }
+
+        /* ========= FILTER BUTTONS ========= */
+        .filter-section {
+            padding: 3rem 5% 1rem;
+            text-align: center;
+        }
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            border: 2px solid var(--primary-deep);
+            background: transparent;
+            color: var(--primary-deep);
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary-deep);
+            color: white;
+            border-color: var(--primary-deep);
+        }
+
+        /* ========= GALLERY MASONRY GRID ========= */
+        .gallery-grid {
+            columns: 3 300px;
+            column-gap: 1.5rem;
+            padding: 1rem 5% 4rem;
+        }
+        .gallery-item {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 1.5rem;
+            border-radius: 1.2rem;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+        .gallery-item:hover img { transform: scale(1.03); }
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(30,42,94,0.9));
+            color: white;
+            padding: 1.2rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .gallery-item:hover .overlay { opacity: 1; }
+        .overlay h4 { font-size: 1rem; margin-bottom: 0.2rem; }
+        .overlay p { font-size: 0.8rem; opacity: 0.9; }
+
+        /* ========= VIDEO SHOWCASE ========= */
+        .video-showcase {
+            background: var(--gray-50);
+            padding: 5rem 5%;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .section-sub {
+            color: var(--highlight-blue);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--primary-deep);
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .video-card {
+            background: #000;
+            border-radius: 1.2rem;
+            overflow: hidden;
+            position: relative;
+            height: 260px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .video-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+            transition: 0.3s;
+        }
+        .video-card:hover img { opacity: 0.5; transform: scale(1.02); }
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3.5rem;
+            color: white;
+            z-index: 2;
+            transition: 0.2s;
+            text-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        .video-card:hover .play-icon { color: var(--highlight-blue); transform: translate(-50%, -50%) scale(1.1); }
+        .video-label {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            color: white;
+            font-weight: 600;
+            z-index: 2;
+            background: rgba(0,0,0,0.5);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        /* ========= LIGHTBOX MODAL ========= */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85%;
+            border-radius: 1rem;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+        .close-lightbox {
+            position: absolute;
+            top: 2rem;
+            right: 3rem;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        /* ========= FOOTER (CONSISTENT) ========= */
+        footer {
+            background: #0B132B;
+            color: #ddd;
+            padding: 3rem 5% 1.5rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer-col h4 { color: white; margin-bottom: 1.2rem; font-size: 1.1rem; font-weight: 600; }
+        .footer-col a, .footer-col p { color: #bbb; text-decoration: none; display: block; margin-bottom: 0.6rem; transition: 0.2s; font-size: 0.9rem; }
+        .footer-col a:hover { color: var(--highlight-blue); transform: translateX(3px); }
+        .social-icons a { font-size: 1.3rem; margin-right: 1rem; display: inline-block; color: #bbb; }
+        .social-icons a:hover { color: var(--highlight-blue); }
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #2d3748;
+            padding-top: 1.5rem;
+            font-size: 0.8rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        .designer-tag { color: var(--gold-accent); font-weight: 600; }
+
+        @media (max-width: 992px) {
+            .nav-menu { display: none; flex-direction: column; position: absolute; top: 80px; left: 0; width: 100%; background: white; padding: 1.5rem; box-shadow: 0 20px 30px rgba(0,0,0,0.1); gap: 1rem; z-index: 999; }
+            .nav-menu.active { display: flex; }
+            .menu-toggle { display: block; }
+            .gallery-grid { columns: 2 250px; }
+            .gallery-hero h1 { font-size: 2.5rem; }
+        }
+        @media (max-width: 640px) {
+            .gallery-grid { columns: 1; }
+            .video-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="images/logoremoved.png" alt="Olanike Dairo Logo">
+    </div>
+    <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="academics.html" class="nav-link">Academics</a></li>
+        <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+        <li><a href="founder.html" class="nav-link">Founder</a></li>
+        <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li><a href="student-life.html" class="nav-link">Student Life</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="mobileToggle"><i class="fas fa-bars"></i></div>
+</nav>
+
+<!-- HERO -->
+<section class="gallery-hero">
+    <h1>Moments & Milestones</h1>
+    <p>A visual journey through our campus, events, and student life.</p>
+</section>
+
+<!-- FILTER BUTTONS -->
+<div class="filter-section">
+    <div class="filter-buttons" id="filterButtons">
+        <button class="filter-btn active" data-filter="all">All Photos</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+        <button class="filter-btn" data-filter="facilities">Facilities</button>
+        <button class="filter-btn" data-filter="academics">In Class</button>
+        <button class="filter-btn" data-filter="sports">Sports</button>
+    </div>
+</div>
+
+<!-- GALLERY MASONRY GRID -->
+<div class="gallery-grid" id="galleryGrid">
+    <!-- Events -->
+    <div class="gallery-item events" data-category="events">
+        <img src="images/2.jpg" alt="Cultural Day">
+        <div class="overlay"><h4>Cultural Day 2025</h4><p>Celebrating Nigeria's rich heritage</p></div>
+    </div>
+    <div class="gallery-item events" data-category="events">
+        <img src="images/g1.jpg" alt="Graduation">
+        <div class="overlay"><h4>Graduation Ceremony</h4><p>Celebrating our achievers</p></div>
+    </div>
+    <!-- Facilities -->
+    <div class="gallery-item facilities" data-category="facilities">
+        <img src="images/img-20241023-wa0012.jpg" alt="Science Lab">
+        <div class="overlay"><h4>Science Laboratory</h4><p>Modern equipment for practical learning</p></div>
+    </div>
+    <div class="gallery-item facilities" data-category="facilities">
+        <img src="images/img-20241023-wa0018.jpg" alt="Library">
+        <div class="overlay"><h4>The School Library</h4><p>Quiet space for research & reading</p></div>
+    </div>
+    <!-- Academics -->
+    <div class="gallery-item academics" data-category="academics">
+        <img src="images/img-20241023-wa0005.jpg" alt="Primary Classroom">
+        <div class="overlay"><h4>Interactive Classrooms</h4><p>Engaging young minds</p></div>
+    </div>
+    <div class="gallery-item academics" data-category="academics">
+        <img src="images/img-20241023-wa0019.jpg" alt="ICT Session">
+        <div class="overlay"><h4>Computer Lab</h4><p>Mastering digital skills</p></div>
+    </div>
+    <!-- Sports -->
+    <div class="gallery-item sports" data-category="sports">
+        <img src="images/playground3.jpg" alt="playground">
+        <div class="overlay"><h4>Play Ground</h4><p>Teamwork & sportsmanship</p></div>
+    </div>
+    <div class="gallery-item events" data-category="events">
+        <img src="images/img-20241018-wa0004.jpg" alt="Music Concert">
+        <div class="overlay"><h4>Music & Arts Festival</h4><p>Creative expressions</p></div>
+    </div>
+    <div class="gallery-item facilities" data-category="facilities">
+        <img src="images/homeecons.jpg" alt="Economics Lab">
+        <div class="overlay"><h4>Economics Lab</h4><p>Interactive learning environment</p></div>
+    </div>
+    <div class="gallery-item academics" data-category="academics">
+        <img src="images/fineart.jpg" alt="Fine Arts Class">
+        <div class="overlay"><h4>Fine Arts Class</h4><p>Group projects & teamwork</p></div>
+    </div>
+</div>
+
+<!-- VIDEO SHOWCASE -->
+<section class="video-showcase">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-sub">Watch Us in Action</span>
+            <h2>Video Highlights</h2>
+        </div>
+        <div class="video-grid">
+            <div class="video-card" data-video="tour">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80" alt="School Tour">
+                <i class="fas fa-play-circle play-icon"></i>
+                <div class="video-label">Virtual School Tour</div>
+            </div>
+            <div class="video-card" data-video="founder">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1587&q=80" alt="Founder Message">
+                <i class="fas fa-play-circle play-icon"></i>
+                <div class="video-label">Message from Olanike Dairo</div>
+            </div>
+            <div class="video-card" data-video="sports">
+                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&auto=format&fit=crop&w=1393&q=80" alt="Sports Highlights">
+                <i class="fas fa-play-circle play-icon"></i>
+                <div class="video-label">Annual Sports Highlights</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LIGHTBOX MODAL -->
+<div id="lightbox" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img id="lightboxImg" src="" alt="Enlarged view">
+</div>
+
+<!-- FOOTER (CONSISTENT) -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-map-marker-alt"></i> 2 Strachan St, Obalende, Lagos Island, Lagos 102273</p>
+            <p><i class="fas fa-map-marker-alt"></i> 32 Strachan St, Obalende, Lagos Island, Lagos 102273</p>
+            <p><i class="fas fa-phone"></i> 02013424038</p>
+            <p><i class="fas fa-envelope"></i> olanikedairocentre@gmail.com</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="academics.html">Academics</a>
+            <a href="admissions.html">Admissions</a>
+            <a href="founder.html">Founder</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="student-life.html">Student Life</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Olanike Dairo Schools. All rights reserved.</p>
+        <p>Designed by <span class="designer-tag"><a href="https://www.princejetro.com.ng/" target="_blank" rel="noopener noreferrer">PrinceJetro</a></span>.</p>
+    </div>
+</footer>
+
+<script>
+    // MOBILE MENU TOGGLE
+    const toggleBtn = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => navMenu.classList.toggle('active'));
+    }
+
+    // FILTER FUNCTIONALITY
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    function filterGallery(filterValue) {
+        galleryItems.forEach(item => {
+            if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                item.style.display = 'inline-block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filterValue = btn.getAttribute('data-filter');
+            filterGallery(filterValue);
+        });
+    });
+
+    // LIGHTBOX FOR IMAGES
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const closeLightbox = document.querySelector('.close-lightbox');
+
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const img = item.querySelector('img');
+            if (img) {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            }
+        });
+    });
+
+    closeLightbox.addEventListener('click', () => lightbox.classList.remove('active'));
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) lightbox.classList.remove('active');
+    });
+
+    // VIDEO CARD PLACEHOLDER ALERT (simulate video playback)
+    const videoCards = document.querySelectorAll('.video-card');
+    videoCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const videoType = card.getAttribute('data-video') || 'video';
+            alert(`🎬 Video showcase: "${card.querySelector('.video-label')?.innerText || 'School video'}" will play soon. Stay tuned for our full media experience.`);
+        });
+    });
+</script>
+</body>
+</html>

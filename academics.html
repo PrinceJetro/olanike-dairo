@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Academics | Olanike Dairo Schools — Excellence in Learning</title>
+    <link rel="icon" href="images/logoremoved.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-deep: #1E2A5E;
+            --primary-vibrant: #2D3E7B;
+            --accent-coral: #FF6B6B;
+            --accent-soft: #FFE9E9;
+            --highlight-blue: #3B82F6;
+            --gold-accent: #F59E0B;
+            --white: #FFFFFF;
+            --gray-50: #F8FAFC;
+            --gray-200: #E2E8F0;
+            --text-dark: #0F172A;
+            --text-muted: #475569;
+            --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05);
+            --shadow-md: 0 20px 25px -12px rgba(0,0,0,0.1);
+            --transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--white);
+            color: var(--text-dark);
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ========= NAVIGATION ========= */
+        .navbar {
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(4px);
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .logo img { height: 52px; width: auto; object-fit: contain; }
+        .nav-menu { display: flex; gap: 2rem; list-style: none; align-items: center; }
+        .nav-link { text-decoration: none; font-weight: 600; color: var(--text-dark); transition: 0.2s; font-size: 0.95rem; }
+        .nav-link:hover, .nav-link.active { color: var(--highlight-blue); }
+        .btn-apply-nav {
+            background: var(--highlight-blue);
+            color: white !important;
+            padding: 0.5rem 1.3rem;
+            border-radius: 40px;
+        }
+        .btn-apply-nav:hover { background: var(--primary-deep); transform: scale(0.97); }
+        .menu-toggle { display: none; font-size: 1.7rem; cursor: pointer; color: var(--primary-deep); }
+
+        /* ========= PAGE HERO ========= */
+        .academic-hero {
+            background: linear-gradient(120deg, rgba(30,42,94,0.92), rgba(45,62,123,0.88)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80') center/cover;
+            padding: 5rem 2rem;
+            text-align: center;
+            color: white;
+        }
+        .academic-hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .academic-hero .hero-tag { font-size: 1.2rem; opacity: 0.9; }
+
+        /* ========= CURRICULUM OVERVIEW ========= */
+        .curriculum-overview {
+            padding: 5rem 5%;
+            background: var(--white);
+            text-align: center;
+        }
+        .section-sub { color: var(--highlight-blue); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: inline-block; margin-bottom: 0.5rem; }
+        .curriculum-overview h2 { font-size: 2.3rem; color: var(--primary-deep); margin-bottom: 1.5rem; }
+        .curriculum-overview p { max-width: 800px; margin: 0 auto; color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; }
+
+        /* ========= PRIMARY & SECONDARY LEVELS ========= */
+        .level-section { padding: 5rem 5%; }
+        .primary-bg { background: var(--gray-50); }
+        .level-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .level-text h2 { font-size: 2.2rem; color: var(--primary-deep); margin-bottom: 1.2rem; }
+        .level-text p { color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.7; }
+        .feature-badge { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem; }
+        .feature-badge i { color: var(--highlight-blue); font-size: 1.2rem; }
+        .level-img img { width: 100%; border-radius: 1.5rem; box-shadow: var(--shadow-md); transition: var(--transition); }
+        .reverse { direction: rtl; }
+        .reverse .level-text { direction: ltr; }
+
+        /* ========= COMPREHENSIVE SUBJECT TABLE (ALL SUBJECTS) ========= */
+        .subjects-full {
+            padding: 5rem 5%;
+            background: var(--white);
+        }
+        .subjects-full h2 { text-align: center; font-size: 2rem; color: var(--primary-deep); margin-bottom: 2rem; }
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        .subject-card {
+            background: var(--gray-50);
+            border-radius: 1.2rem;
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+        .subject-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+        .subject-header {
+            background: var(--primary-deep);
+            color: white;
+            padding: 1.2rem;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .subject-list {
+            padding: 1.2rem 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+        .subject-tag {
+            background: white;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            color: var(--primary-deep);
+            font-weight: 500;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        /* ========= TEACHING APPROACH ========= */
+        .approach-section {
+            padding: 5rem 5%;
+            background: linear-gradient(145deg, var(--primary-deep), #25377a);
+            color: white;
+        }
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .approach-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(2px);
+            padding: 2rem;
+            border-radius: 1.2rem;
+            text-align: center;
+            transition: 0.2s;
+        }
+        .approach-card i { font-size: 2.5rem; margin-bottom: 1rem; color: var(--gold-accent); }
+        .approach-card h3 { margin-bottom: 0.8rem; }
+
+        /* ========= CALENDAR & EXAMS ========= */
+        .calendar-exam {
+            padding: 5rem 5%;
+            background: var(--gray-50);
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .info-card {
+            background: white;
+            border-radius: 1.2rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            border-left: 5px solid var(--highlight-blue);
+        }
+        .info-card h3 { color: var(--primary-deep); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.7rem; }
+        .info-card ul { list-style: none; }
+        .info-card li { margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem; }
+
+        /* ========= FOOTER (CONSISTENT) ========= */
+        footer {
+            background: #0B132B;
+            color: #ddd;
+            padding: 3rem 5% 1.5rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer-col h4 { color: white; margin-bottom: 1.2rem; font-size: 1.1rem; font-weight: 600; }
+        .footer-col a, .footer-col p { color: #bbb; text-decoration: none; display: block; margin-bottom: 0.6rem; transition: 0.2s; font-size: 0.9rem; }
+        .footer-col a:hover { color: var(--highlight-blue); transform: translateX(3px); }
+        .social-icons a { font-size: 1.3rem; margin-right: 1rem; display: inline-block; }
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #2d3748;
+            padding-top: 1.5rem;
+            font-size: 0.8rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        .designer-tag { color: var(--gold-accent); font-weight: 600; }
+
+        @media (max-width: 992px) {
+            .nav-menu { display: none; flex-direction: column; position: absolute; top: 80px; left: 0; width: 100%; background: white; padding: 1.5rem; box-shadow: 0 20px 30px rgba(0,0,0,0.1); gap: 1rem; z-index: 999; }
+            .nav-menu.active { display: flex; }
+            .menu-toggle { display: block; }
+            .level-grid, .reverse, .info-grid { grid-template-columns: 1fr; }
+            .academic-hero h1 { font-size: 2.5rem; }
+        }
+        @media (max-width: 640px) {
+            .subject-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="images/logoremoved.png" alt="Olanike Dairo Logo">
+    </div>
+    <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="academics.html" class="nav-link active">Academics</a></li>
+        <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+        <li><a href="founder.html" class="nav-link">Founder</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="student-life.html" class="nav-link">Student Life</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="mobileToggle"><i class="fas fa-bars"></i></div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="academic-hero">
+    <h1>Academic Excellence</h1>
+    <p class="hero-tag">A rigorous curriculum blended with character development — Play & Hard Work</p>
+</section>
+
+<!-- CURRICULUM OVERVIEW -->
+<section class="curriculum-overview">
+    <span class="section-sub">Our Educational Framework</span>
+    <h2>Integrated Learning Model</h2>
+    <p>Our curriculum seamlessly integrates the <strong>Nigerian National Curriculum</strong> with global best practices. We focus on the "Total Child" concept — ensuring that every student is academically sound, morally upright, socially confident, and prepared for the future.</p>
+</section>
+
+<!-- PRIMARY LEVEL -->
+<section class="level-section primary-bg">
+    <div class="container level-grid">
+        <div class="level-text">
+            <span class="section-sub" style="color: var(--highlight-blue);">Ages 5 – 11</span>
+            <h2>Primary Education</h2>
+            <p>At the primary level, we build a strong foundation in literacy, numeracy, and critical thinking. Our "learning through play" philosophy transforms complex concepts into joyful discoveries, nurturing curious and resilient young minds.</p>
+            <div class="feature-badge"><i class="fas fa-check-circle"></i> <span>Creative Arts & Expression</span></div>
+            <div class="feature-badge"><i class="fas fa-check-circle"></i> <span>Foundational Science & Technology</span></div>
+            <div class="feature-badge"><i class="fas fa-check-circle"></i> <span>Moral & Civic Education</span></div>
+            <div class="feature-badge"><i class="fas fa-check-circle"></i> <span>Phonics & Early Reading Program</span></div>
+        </div>
+        <div class="level-img">
+            <img src="images/primary-students-learning.jpg" alt="Primary students learning">
+        </div>
+    </div>
+</section>
+
+<!-- SECONDARY LEVEL -->
+<section class="level-section">
+    <div class="container level-grid reverse">
+        <div class="level-text">
+            <span class="section-sub" style="color: var(--highlight-blue);">Ages 11 – 17</span>
+            <h2>Secondary Education</h2>
+            <p>Our secondary program is designed for academic rigor and leadership development. Students are prepared for top-tier universities and global opportunities through a balanced focus on sciences, humanities, and vocational skills.</p>
+            <div class="feature-badge"><i class="fas fa-check-circle"></i> <span>WAEC, NECO & BECE Preparation</span></div>
+            <div class="feature-badge"><i class="fas fa-check-circle"></i> <span>Advanced STEM & ICT Labs</span></div>
+            <div class="feature-badge"><i class="fas fa-check-circle"></i> <span>Career Guidance & Entrepreneurship</span></div>
+            <div class="feature-badge"><i class="fas fa-check-circle"></i> <span>Leadership & Debate Clubs</span></div>
+        </div>
+        <div class="level-img">
+            <img src="images/secondary-students-in-lab.jpg" alt="Secondary students in lab">
+        </div>
+    </div>
+</section>
+
+<!-- COMPREHENSIVE SUBJECT LIST — ALL SUBJECTS OFFERED -->
+<section class="subjects-full">
+    <div class="container">
+        <h2>📚 Complete Subject Offerings</h2>
+        <div class="subject-grid">
+            <!-- Sciences -->
+            <div class="subject-card">
+                <div class="subject-header"><i class="fas fa-flask"></i> Sciences</div>
+                <div class="subject-list">
+                    <span class="subject-tag">Basic Science</span>
+                    <span class="subject-tag">Physics</span>
+                    <span class="subject-tag">Chemistry</span>
+                    <span class="subject-tag">Biology</span>
+                    <span class="subject-tag">Further Mathematics</span>
+                    <span class="subject-tag">Agricultural Science</span>
+                    <span class="subject-tag">Integrated Science</span>
+                    <span class="subject-tag">Health Education</span>
+                    <span class="subject-tag">Computer Science / ICT</span>
+                    <span class="subject-tag">Physical Education</span>
+                </div>
+            </div>
+            <!-- Languages -->
+            <div class="subject-card">
+                <div class="subject-header"><i class="fas fa-language"></i> Languages</div>
+                <div class="subject-list">
+                    <span class="subject-tag">English Studies</span>
+                    <span class="subject-tag">English Language</span>
+                    <span class="subject-tag">Literature in English</span>
+                    <span class="subject-tag">Yoruba Language</span>
+                    <span class="subject-tag">French Language</span>
+                    <span class="subject-tag">Arabic (Basic)</span>
+                    <span class="subject-tag">Phonics (Primary)</span>
+                </div>
+            </div>
+            <!-- Commercial & Social Sciences -->
+            <div class="subject-card">
+                <div class="subject-header"><i class="fas fa-chart-line"></i> Commercial / Social Sciences</div>
+                <div class="subject-list">
+                    <span class="subject-tag">Economics</span>
+                    <span class="subject-tag">Commerce</span>
+                    <span class="subject-tag">Financial Accounting</span>
+                    <span class="subject-tag">Business Studies</span>
+                    <span class="subject-tag">Social Studies</span>
+                    <span class="subject-tag">Civic Education</span>
+                    <span class="subject-tag">Government</span>
+                    <span class="subject-tag">Geography</span>
+                    <span class="subject-tag">History</span>
+                </div>
+            </div>
+            <!-- Arts & Humanities -->
+            <div class="subject-card">
+                <div class="subject-header"><i class="fas fa-palette"></i> Arts & Humanities</div>
+                <div class="subject-list">
+                    <span class="subject-tag">Christian Religious Studies</span>
+                    <span class="subject-tag">Islamic Religious Studies</span>
+                    <span class="subject-tag">Cultural & Creative Arts</span>
+                    <span class="subject-tag">Music</span>
+                    <span class="subject-tag">Drama / Theatre Arts</span>
+                    <span class="subject-tag">Fine Art / Drawing</span>
+                    <span class="subject-tag">Home Economics</span>
+                    <span class="subject-tag">Nigerian Peoples & Culture</span>
+                </div>
+            </div>
+            <!-- Vocational & Tech Skills -->
+            <div class="subject-card">
+                <div class="subject-header"><i class="fas fa-laptop-code"></i> Vocational & 21st Century Skills</div>
+                <div class="subject-list">
+                    <span class="subject-tag">Basic ICT / Coding</span>
+                    <span class="subject-tag">Robotics (Intro)</span>
+                    <span class="subject-tag">Data Processing</span>
+                    <span class="subject-tag">Entrepreneurship</span>
+                    <span class="subject-tag">Tailoring & Fashion Design</span>
+                    <span class="subject-tag">Catering & Food Management</span>
+                    <span class="subject-tag">Woodwork / Basic Tech</span>
+                    <span class="subject-tag">Digital Literacy</span>
+                </div>
+            </div>
+            <!-- Extracurricular / Clubs (Academic) -->
+            <div class="subject-card">
+                <div class="subject-header"><i class="fas fa-users"></i> Co-curricular & Clubs</div>
+                <div class="subject-list">
+                    <span class="subject-tag">Debate & Public Speaking</span>
+                    <span class="subject-tag">Press Club (Journalism)</span>
+                    <span class="subject-tag">STEM Club</span>
+                    <span class="subject-tag">Chess Club</span>
+                    <span class="subject-tag">Sports (Football, Basketball, Athletics)</span>
+                    <span class="subject-tag">Literary & Creative Writing</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TEACHING APPROACH & EXTRACURRICULARS -->
+<section class="approach-section">
+    <div class="container" style="text-align: center;">
+        <span class="section-sub" style="color: var(--accent-soft);">Methodology & Beyond</span>
+        <h2 style="color: white; font-size: 2rem; margin-bottom: 1rem;">Holistic Development Approach</h2>
+        <div class="approach-grid">
+            <div class="approach-card"><i class="fas fa-chalkboard-user"></i><h3>Student-Centered</h3><p>Differentiated instruction tailored to individual learning styles and paces.</p></div>
+            <div class="approach-card"><i class="fas fa-microscope"></i><h3>Practical Learning</h3><p>Modern science labs, ICT hubs, and project-based assignments.</p></div>
+            <div class="approach-card"><i class="fas fa-futbol"></i><h3>Sports & Creativity</h3><p>Football, athletics, music, drama, and annual inter-house competitions.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- ACADEMIC CALENDAR & EXAMINATION SYSTEMS -->
+<section class="calendar-exam">
+    <div class="container info-grid">
+        <div class="info-card">
+            <h3><i class="fas fa-calendar-alt" style="color: var(--highlight-blue);"></i> Academic Calendar</h3>
+            <ul>
+                <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--highlight-blue);"></i> <strong>1st Term:</strong> September – December (Resumption: Sept 15)</li>
+                <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--highlight-blue);"></i> <strong>2nd Term:</strong> January – April</li>
+                <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--highlight-blue);"></i> <strong>3rd Term:</strong> May – July</li>
+                <li><i class="fas fa-circle" style="font-size: 0.5rem; color: var(--highlight-blue);"></i> Mid-term breaks & vacations as per school diary</li>
+            </ul>
+        </div>
+        <div class="info-card">
+            <h3><i class="fas fa-edit" style="color: var(--highlight-blue);"></i> Examination Systems</h3>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Weekly Continuous Assessments (C.A)</li>
+                <li><i class="fas fa-check-circle"></i> Mid-Term & Terminal Examinations</li>
+                <li><i class="fas fa-check-circle"></i> Mock Exams (for graduating classes)</li>
+                <li><i class="fas fa-check-circle"></i> External: WAEC, NECO, BECE (JSCE)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-map-marker-alt"></i> 2 Strachan St, Obalende, Lagos Island, Lagos 102273</p>
+            <p><i class="fas fa-map-marker-alt"></i> 32 Strachan St, Obalende, Lagos Island, Lagos 102273</p>
+            <p><i class="fas fa-phone"></i> 02013424038</p>
+            <p><i class="fas fa-envelope"></i> olanikedairocentre@gmail.com</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="academics.html">Academics</a>
+            <a href="admissions.html">Admissions</a>
+            <a href="founder.html">Founder</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="student-life.html">Student Life</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Olanike Dairo Schools. All rights reserved.</p>
+        <p>Designed by <span class="designer-tag"><a href="https://www.princejetro.com.ng/" target="_blank" rel="noopener noreferrer">PrinceJetro</a></span>.</p>
+    </div>
+</footer>
+
+
+<!-- MOBILE MENU SCRIPT -->
+<script>
+    const toggleBtn = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    }
+    // Active nav highlight based on current page
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === 'academics.html') {
+            link.classList.add('active');
+        }
+    });
+</script>
+</body>
+</html>

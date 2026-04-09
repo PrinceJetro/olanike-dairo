@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Student Life | Olanike Dairo Schools — Beyond the Classroom</title>
+    <link rel="icon" href="images/logoremoved.png" type="image/png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-deep: #1E2A5E;
+            --primary-vibrant: #2D3E7B;
+            --accent-coral: #FF6B6B;
+            --accent-soft: #FFE9E9;
+            --highlight-blue: #3B82F6;
+            --gold-accent: #F59E0B;
+            --white: #FFFFFF;
+            --gray-50: #F8FAFC;
+            --gray-200: #E2E8F0;
+            --text-dark: #0F172A;
+            --text-muted: #475569;
+            --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05);
+            --shadow-md: 0 20px 25px -12px rgba(0,0,0,0.1);
+            --transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--white);
+            color: var(--text-dark);
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ========= NAVIGATION (CONSISTENT) ========= */
+        .navbar {
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(4px);
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .logo img { height: 52px; width: auto; object-fit: contain; }
+        .nav-menu { display: flex; gap: 2rem; list-style: none; align-items: center; }
+        .nav-link { text-decoration: none; font-weight: 600; color: var(--text-dark); transition: 0.2s; font-size: 0.95rem; }
+        .nav-link:hover, .nav-link.active { color: var(--highlight-blue); }
+        .btn-apply-nav {
+            background: var(--highlight-blue);
+            color: white !important;
+            padding: 0.5rem 1.3rem;
+            border-radius: 40px;
+        }
+        .btn-apply-nav:hover { background: var(--primary-deep); transform: scale(0.97); }
+        .menu-toggle { display: none; font-size: 1.7rem; cursor: pointer; color: var(--primary-deep); }
+
+        /* ========= HERO SECTION ========= */
+        .hero-student {
+            background: linear-gradient(135deg, rgba(30,42,94,0.85), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80') center/cover;
+            padding: 6rem 2rem;
+            text-align: center;
+            color: white;
+        }
+        .hero-student h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .hero-student p { font-size: 1.2rem; opacity: 0.9; }
+
+        /* ========= SECTION HEADERS ========= */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .section-sub {
+            color: var(--highlight-blue);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--primary-deep);
+            margin-top: 0.5rem;
+        }
+
+        /* ========= CLUBS & SOCIETIES GRID ========= */
+        .clubs-section {
+            padding: 5rem 5%;
+            background: var(--white);
+        }
+        .clubs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .club-card {
+            background: var(--gray-50);
+            border-radius: 1.2rem;
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+        .club-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-md); }
+        .club-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        .club-info { padding: 1.5rem; }
+        .club-info h3 { color: var(--primary-deep); margin-bottom: 0.5rem; font-size: 1.3rem; }
+
+        /* ========= SPORTS SHOWCASE (SPLIT LAYOUT) ========= */
+        .sports-showcase {
+            background: var(--primary-deep);
+            color: white;
+            margin: 2rem 5%;
+            border-radius: 2rem;
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .sports-text h2 { font-size: 2rem; margin-bottom: 1rem; color: var(--gold-accent); }
+        .sports-text ul { list-style: none; margin-top: 1rem; }
+        .sports-text li { margin-bottom: 0.7rem; display: flex; align-items: center; gap: 0.7rem; }
+        .sports-grid-mini {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .sports-grid-mini img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 1rem;
+            transition: 0.3s;
+        }
+        .sports-grid-mini img:hover { transform: scale(1.02); opacity: 0.9; }
+
+        /* ========= EVENTS & LEADERSHIP ========= */
+        .events-leadership {
+            padding: 5rem 5%;
+            background: var(--gray-50);
+        }
+        .dual-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .leadership-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1.2rem;
+            box-shadow: var(--shadow-sm);
+            border-left: 5px solid var(--highlight-blue);
+        }
+        .events-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        .event-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            transition: 0.2s;
+        }
+        .event-date {
+            background: var(--highlight-blue);
+            color: white;
+            border-radius: 1rem;
+            padding: 0.7rem 1rem;
+            text-align: center;
+            min-width: 70px;
+            font-weight: 700;
+        }
+        .event-date span { font-size: 1.3rem; display: block; }
+
+        /* ========= GALLERY (MASONRY STYLE) ========= */
+        .gallery-section {
+            padding: 5rem 5%;
+            background: white;
+        }
+        .gallery-masonry {
+            columns: 4 240px;
+            column-gap: 1.2rem;
+        }
+        .gallery-masonry img {
+            width: 100%;
+            margin-bottom: 1rem;
+            border-radius: 1rem;
+            transition: 0.3s;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+        }
+        .gallery-masonry img:hover { transform: scale(1.02); box-shadow: var(--shadow-md); }
+
+        /* ========= TESTIMONIAL (STUDENT VOICE) ========= */
+        .testimonial-student {
+            background: linear-gradient(145deg, var(--primary-deep), #25377a);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            margin: 0 5% 3rem;
+            border-radius: 2rem;
+        }
+        .testimonial-student i { font-size: 2.5rem; color: var(--gold-accent); margin-bottom: 1rem; }
+        .testimonial-student blockquote { font-size: 1.3rem; font-style: italic; max-width: 800px; margin: 0 auto; }
+
+        /* ========= FOOTER (CONSISTENT) ========= */
+        footer {
+            background: #0B132B;
+            color: #ddd;
+            padding: 3rem 5% 1.5rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer-col h4 { color: white; margin-bottom: 1.2rem; font-size: 1.1rem; font-weight: 600; }
+        .footer-col a, .footer-col p { color: #bbb; text-decoration: none; display: block; margin-bottom: 0.6rem; transition: 0.2s; font-size: 0.9rem; }
+        .footer-col a:hover { color: var(--highlight-blue); transform: translateX(3px); }
+        .social-icons a { font-size: 1.3rem; margin-right: 1rem; display: inline-block; }
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #2d3748;
+            padding-top: 1.5rem;
+            font-size: 0.8rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        .designer-tag { color: var(--gold-accent); font-weight: 600; }
+
+        @media (max-width: 992px) {
+            .nav-menu { display: none; flex-direction: column; position: absolute; top: 80px; left: 0; width: 100%; background: white; padding: 1.5rem; box-shadow: 0 20px 30px rgba(0,0,0,0.1); gap: 1rem; z-index: 999; }
+            .nav-menu.active { display: flex; }
+            .menu-toggle { display: block; }
+            .sports-showcase, .dual-grid { grid-template-columns: 1fr; }
+            .hero-student h1 { font-size: 2.5rem; }
+            .gallery-masonry { columns: 2 180px; }
+        }
+        @media (max-width: 640px) {
+            .gallery-masonry { columns: 1; }
+            .event-item { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="images/logoremoved.png" alt="Olanike Dairo Logo">
+    </div>
+    <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="academics.html" class="nav-link">Academics</a></li>
+        <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+        <li><a href="founder.html" class="nav-link">Founder</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="student-life.html" class="nav-link active">Student Life</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="mobileToggle"><i class="fas fa-bars"></i></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-student">
+    <div>
+        <span class="section-sub" style="color: var(--accent-soft);">Life at Olanike Dairo</span>
+        <h1>Beyond the Classroom</h1>
+        <p>Where creativity, leadership, and friendship flourish</p>
+    </div>
+</section>
+
+<!-- CLUBS & SOCIETIES -->
+<section class="clubs-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-sub">Find Your Passion</span>
+            <h2>Clubs & Societies</h2>
+            <p>Our "Play and Hard Work" philosophy extends to a vibrant extracurricular ecosystem.</p>
+        </div>
+        <div class="clubs-grid">
+            <div class="club-card">
+                <div class="club-img" style="background-image: url('images/IMG-20241023-WA0019.jpg');"></div>
+                <div class="club-info">
+                    <h3>ICT & Robotics Club</h3>
+                    <p>Coding, robotics competitions, and digital innovation for future tech leaders.</p>
+                </div>
+            </div>
+            <div class="club-card">
+                <div class="club-img" style="background-image: url('images/IMG-20241023-WA0026.jpg');"></div>
+                <div class="club-info">
+                    <h3>Debate & Press Club</h3>
+                    <p>Public speaking, journalism, and critical thinking — voices that shape opinions.</p>
+                </div>
+            </div>
+            <div class="club-card">
+                <div class="club-img" style="background-image: url('images/fineart.jpg');"></div>
+                <div class="club-info">
+                    <h3>Creative Arts & Music</h3>
+                    <p>From choir to drama, painting to dance — celebrating creative expression.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SPORTS SHOWCASE -->
+<section class="sports-showcase">
+    <div class="sports-text">
+        <h2>🏆 Champions on & off the Field</h2>
+        <p>Physical fitness and teamwork are core to our development. Our students participate in football, basketball, athletics, and more — building resilience, discipline, and school spirit.</p>
+        <ul>
+            <li><i class="fas fa-running"></i> Annual Inter-House Sports Competition</li>
+            <li><i class="fas fa-trophy"></i> External Invitational Tournaments</li>
+            <li><i class="fas fa-medal"></i> Weekly Physical Education & Wellness</li>
+            <li><i class="fas fa-futbol"></i> After-school sports academies</li>
+        </ul>
+    </div>
+    <div class="sports-grid-mini">
+        <img src="images/IMG-20241023-WA0009.jpg" alt="Football">
+        <img src="images/IMG-20241023-WA0010.jpg" alt="Basketball">
+        <img src="images/IMG-20241107-WA0027.jpg" alt="Track">
+        <img src="images/IMG-20241023-WA0024.jpg" alt="Cheer">
+    </div>
+</section>
+
+<!-- EVENTS & LEADERSHIP (DUAL) -->
+<section class="events-leadership">
+    <div class="container dual-grid">
+        <div class="leadership-card">
+            <i class="fas fa-crown" style="font-size: 2rem; color: var(--gold-accent); margin-bottom: 1rem;"></i>
+            <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">Prefectship & Leadership</h3>
+            <p>We don't just teach — we empower. Our student leadership program places senior students in governance roles, fostering accountability, mentorship, and real-world responsibility. From house captains to press prefects, every leader shapes our community.</p>
+            <ul style="margin-top: 1rem; list-style: none;">
+                <li><i class="fas fa-check-circle" style="color: var(--highlight-blue);"></i> Leadership workshops & seminars</li>
+                <li><i class="fas fa-check-circle" style="color: var(--highlight-blue);"></i> Student parliament sessions</li>
+                <li><i class="fas fa-check-circle" style="color: var(--highlight-blue);"></i> Peer mentoring program</li>
+            </ul>
+        </div>
+        <div>
+            <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">📅 Upcoming Events</h3>
+            <div class="events-list">
+                <div class="event-item">
+                    <div class="event-date"><span>15</span>OCT</div>
+                    <div><h4>Cultural Day Celebration</h4><p>Traditional attire, cuisine, and performances celebrating Nigeria's heritage.</p></div>
+                </div>
+                <div class="event-item">
+                    <div class="event-date" style="background: var(--deep-magenta);"><span>05</span>DEC</div>
+                    <div><h4>End of Year Concert & Prize Giving</h4><p>Talent showcase and recognition of academic excellence.</p></div>
+                </div>
+                <div class="event-item">
+                    <div class="event-date" style="background: var(--primary-deep);"><span>22</span>NOV</div>
+                    <div><h4>Inter-House Sports Finals</h4><p>Cheer your house to victory — family and friends invited.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY MASONRY -->
+<section class="gallery-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-sub">Moments Captured</span>
+            <h2>Our Vibrant Campus Life</h2>
+        </div>
+        <div class="gallery-masonry">
+            <img src="images/students_in_class1.jpg" alt="Classroom interaction">
+            <img src="images/secondary-students-in-lab.jpg" alt="Science lab">
+            <img src="images/IMG-20241023-WA0026.jpg" alt="Sports day">
+            <img src="images/IMG-20241023-WA0002.jpg" alt="School assembly">
+            <img src="images/primary-students-learning.jpg" alt="Students working">
+            <img src="images/IMG-20241023-WA0009.jpg" alt="Track event">
+            <img src="images/fineart.jpg" alt="Music class">
+            <img src="images/IMG-20241023-WA0019.jpg" alt="Robotics">
+        </div>
+    </div>
+</section>
+
+<!-- STUDENT TESTIMONIAL -->
+<section class="testimonial-student">
+    <i class="fas fa-quote-left"></i>
+    <blockquote>"Olanike Dairo gave me the confidence to lead. From the debate club to sports, every day was an opportunity to grow. I'm proud to be an alumna!"</blockquote>
+    <p style="margin-top: 1rem; font-weight: 600;">— Adaeze N., Head Girl (2023/2024)</p>
+</section>
+
+<!-- FOOTER (CONSISTENT) -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-map-marker-alt"></i> 2 Strachan St, Obalende, Lagos Island, Lagos 102273</p>
+            <p><i class="fas fa-map-marker-alt"></i> 32 Strachan St, Obalende, Lagos Island, Lagos 102273</p>
+            <p><i class="fas fa-phone"></i> 02013424038</p>
+            <p><i class="fas fa-envelope"></i> olanikedairocentre@gmail.com</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="academics.html">Academics</a>
+            <a href="admissions.html">Admissions</a>
+            <a href="founder.html">Founder</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="student-life.html">Student Life</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Olanike Dairo Schools. All rights reserved.</p>
+        <p>Designed by <span class="designer-tag"><a href="https://www.princejetro.com.ng/" target="_blank" rel="noopener noreferrer">PrinceJetro</a></span>.</p>
+    </div>
+</footer>
+
+<!-- MOBILE MENU SCRIPT -->
+<script>
+    const toggleBtn = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    }
+    // Active link highlight based on current page
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === 'student-life.html') {
+            link.classList.add('active');
+        }
+    });
+</script>
+</body>
+</html>
