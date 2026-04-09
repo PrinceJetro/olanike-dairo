@@ -1,425 +1,690 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <title>Olanike Dairo Secondary School | Excellence in Education</title>
-    <link rel="icon" href="images/logoremoved.png" type="image/png">
+    <link rel="icon" href="images/logoremoved.png" type="image/png" />
     <!-- Google Fonts + Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
-        /* ----------------------------------------------
+      /* ----------------------------------------------
             RESET & GLOBAL VARIABLES (REDESIGNED)
         ------------------------------------------------ */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        :root {
-            --primary-deep: #1E2A5E;        /* deeper navy/purple blend */
-            --primary-vibrant: #2D3E7B;
-            --accent-coral: #FF6B6B;
-            --accent-soft: #FFE0E0;
-            --highlight-blue: #3B82F6;
-            --gold-accent: #F59E0B;
-            --white: #FFFFFF;
-            --gray-100: #F8FAFC;
-            --gray-300: #E2E8F0;
-            --text-dark: #0F172A;
-            --text-muted: #475569;
-            --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.02);
-            --shadow-md: 0 20px 25px -12px rgba(0,0,0,0.1);
-            --transition: all 0.25s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-        }
+      :root {
+        --primary-deep: #1e2a5e; /* deeper navy/purple blend */
+        --primary-vibrant: #2d3e7b;
+        --accent-coral: #ff6b6b;
+        --accent-soft: #ffe0e0;
+        --highlight-blue: #3b82f6;
+        --gold-accent: #f59e0b;
+        --white: #ffffff;
+        --gray-100: #f8fafc;
+        --gray-300: #e2e8f0;
+        --text-dark: #0f172a;
+        --text-muted: #475569;
+        --shadow-sm:
+          0 10px 25px -5px rgba(0, 0, 0, 0.05),
+          0 8px 10px -6px rgba(0, 0, 0, 0.02);
+        --shadow-md: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
+        --transition: all 0.25s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--white);
-            color: var(--text-dark);
-            line-height: 1.5;
-            scroll-behavior: smooth;
-        }
+      body {
+        font-family: "Inter", sans-serif;
+        background: var(--white);
+        color: var(--text-dark);
+        line-height: 1.5;
+        scroll-behavior: smooth;
+      }
 
-        h1, h2, h3, h4 {
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
 
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
 
-        /* ---------- BUTTONS & GLOBAL ELEMENTS ---------- */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.75rem;
-            border-radius: 40px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-            font-size: 0.95rem;
-            cursor: pointer;
-            border: none;
-        }
+      /* ---------- BUTTONS & GLOBAL ELEMENTS ---------- */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.75rem;
+        border-radius: 40px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: var(--transition);
+        font-size: 0.95rem;
+        cursor: pointer;
+        border: none;
+      }
 
-        .btn-primary {
-            background: var(--primary-deep);
-            color: white;
-            box-shadow: var(--shadow-sm);
-        }
-        .btn-primary:hover {
-            background: var(--highlight-blue);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-        .btn-outline-light {
-            border: 2px solid white;
-            background: transparent;
-            color: white;
-        }
-        .btn-outline-light:hover {
-            background: white;
-            color: var(--primary-deep);
-        }
-        .btn-secondary-outline {
-            border: 2px solid var(--primary-deep);
-            color: var(--primary-deep);
-            background: transparent;
-        }
-        .btn-secondary-outline:hover {
-            background: var(--primary-deep);
-            color: white;
-        }
+      .btn-primary {
+        background: var(--primary-deep);
+        color: white;
+        box-shadow: var(--shadow-sm);
+      }
+      .btn-primary:hover {
+        background: var(--highlight-blue);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+      .btn-outline-light {
+        border: 2px solid white;
+        background: transparent;
+        color: white;
+      }
+      .btn-outline-light:hover {
+        background: white;
+        color: var(--primary-deep);
+      }
+      .btn-secondary-outline {
+        border: 2px solid var(--primary-deep);
+        color: var(--primary-deep);
+        background: transparent;
+      }
+      .btn-secondary-outline:hover {
+        background: var(--primary-deep);
+        color: white;
+      }
 
-        /* ---------- MODERN NAVIGATION (STICKY) ---------- */
-        .navbar {
-            background: rgba(255,255,255,0.96);
-            backdrop-filter: blur(4px);
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 5%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            transition: all 0.2s;
-        }
-        .logo img {
-            height: 52px;
-            width: auto;
-            object-fit: contain;
-        }
+      /* ---------- MODERN NAVIGATION (STICKY) ---------- */
+      .navbar {
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(4px);
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        transition: all 0.2s;
+      }
+      .logo img {
+        height: 52px;
+        width: auto;
+        object-fit: contain;
+      }
+      .nav-menu {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        align-items: center;
+      }
+      .nav-link {
+        text-decoration: none;
+        font-weight: 600;
+        color: var(--text-dark);
+        transition: color 0.2s;
+        font-size: 0.95rem;
+      }
+      .nav-link:hover {
+        color: var(--highlight-blue);
+      }
+      .btn-apply-nav {
+        background: var(--highlight-blue);
+        color: white !important;
+        padding: 0.5rem 1.25rem;
+        border-radius: 30px;
+      }
+      .btn-apply-nav:hover {
+        background: var(--primary-deep);
+        transform: scale(0.97);
+      }
+      .menu-toggle {
+        display: none;
+        font-size: 1.7rem;
+        cursor: pointer;
+        color: var(--primary-deep);
+      }
+
+      /* ---------- HERO SECTION (ENHANCED) ---------- */
+      .hero {
+        position: relative;
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+      }
+      .hero-slider {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+      .hero-slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center 30%;
+        opacity: 0;
+        transition: opacity 1.2s ease-in-out;
+      }
+      .hero-slide.active {
+        opacity: 1;
+      }
+      .hero-slide::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(30, 42, 94, 0.75) 0%,
+          rgba(0, 0, 0, 0.45) 100%
+        );
+      }
+      .hero-content {
+        position: relative;
+        z-index: 5;
+        max-width: 850px;
+        padding: 1.5rem;
+        color: white;
+      }
+      .hero-content h1 {
+        font-size: clamp(2.5rem, 7vw, 4.5rem);
+        margin-bottom: 1.25rem;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      }
+      .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        opacity: 0.95;
+      }
+      .hero-buttons {
+        display: flex;
+        gap: 1.2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .slider-dots {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        z-index: 10;
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .dot.active {
+        width: 32px;
+        background: var(--highlight-blue);
+      }
+
+      /* ---------- QUICK ACCESS CARDS (REDESIGN) ---------- */
+      .quick-access {
+        margin-top: -3rem;
+        position: relative;
+        z-index: 20;
+        padding: 0 5%;
+      }
+      .quick-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        background: white;
+        border-radius: 2rem;
+        box-shadow: var(--shadow-md);
+        overflow: hidden;
+      }
+      .quick-card {
+        padding: 2rem 1rem;
+        text-align: center;
+        text-decoration: none;
+        transition: var(--transition);
+        background: white;
+        border-right: 1px solid var(--gray-300);
+      }
+      .quick-card:last-child {
+        border: none;
+      }
+      .quick-card i {
+        font-size: 2.4rem;
+        color: var(--highlight-blue);
+        margin-bottom: 0.75rem;
+      }
+      .quick-card span {
+        font-weight: 700;
+        color: var(--primary-deep);
+        display: block;
+      }
+      .quick-card:hover {
+        background: var(--primary-deep);
+        transform: translateY(-6px);
+      }
+      .quick-card:hover i,
+      .quick-card:hover span {
+        color: white;
+      }
+
+      /* ---------- ABOUT PREVIEW (REFINED) ---------- */
+      .about-section {
+        padding: 5rem 5%;
+        background: var(--gray-100);
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+      .about-badge {
+        color: var(--highlight-blue);
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 0.75rem;
+        display: inline-block;
+      }
+      .about-title {
+        font-size: 2.5rem;
+        color: var(--primary-deep);
+        margin-bottom: 1.5rem;
+      }
+      .about-title span {
+        color: var(--highlight-blue);
+      }
+      .feature-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        margin: 2rem 0;
+      }
+      .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      .feature-item i {
+        color: var(--gold-accent);
+        font-size: 1.25rem;
+      }
+      .about-image-stack {
+        position: relative;
+      }
+      .main-img {
+        width: 100%;
+        border-radius: 1.5rem;
+        box-shadow: 25px 25px 0 var(--accent-soft);
+      }
+      .quote-card {
+        background: var(--primary-deep);
+        color: white;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        position: absolute;
+        bottom: -1.5rem;
+        right: -1rem;
+        width: 70%;
+        box-shadow: var(--shadow-md);
+      }
+
+      /* ---------- FEATURES GRID (WHY CHOOSE US) ---------- */
+      .features-section {
+        padding: 5rem 5%;
+        text-align: center;
+      }
+      .section-sub {
+        color: var(--highlight-blue);
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+      .feature-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        box-shadow: var(--shadow-sm);
+        transition: var(--transition);
+        border-bottom: 4px solid transparent;
+      }
+      .feature-card:hover {
+        border-bottom-color: var(--highlight-blue);
+        transform: translateY(-8px);
+      }
+      .feature-icon {
+        background: var(--accent-soft);
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        color: var(--primary-deep);
+        font-size: 2rem;
+      }
+
+      /* ---------- PROGRAM SHOWCASE (modern) ---------- */
+      .program-showcase {
+        display: flex;
+        flex-direction: column;
+      }
+      .program-block {
+        display: flex;
+        min-height: 460px;
+      }
+      .program-block.reverse {
+        flex-direction: row-reverse;
+      }
+      .program-text {
+        flex: 1;
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+      }
+      .program-primary {
+        background: var(--primary-deep);
+      }
+      .program-secondary {
+        background: #b91c1c;
+      }
+      .program-img {
+        flex: 1;
+        background-size: cover;
+        background-position: center;
+      }
+      /* ---------- ACHIEVEMENT COUNTERS ---------- */
+      .stats-section {
+        background: linear-gradient(
+          120deg,
+          var(--primary-deep) 0%,
+          #1e2a4e 100%
+        );
+        padding: 4rem 5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        gap: 2rem;
+      }
+      .stat h3 {
+        font-size: 3rem;
+        color: var(--gold-accent);
+        margin-bottom: 0.5rem;
+      }
+      .stat p {
+        color: white;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+
+      /* ---------- TESTIMONIALS / GALLERY / CTA ---------- */
+      .testimonial-section {
+        padding: 5rem 5%;
+        background: var(--gray-100);
+        text-align: center;
+      }
+      .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+        max-width: 1000px;
+        margin-inline: auto;
+      }
+      .testimonial-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        box-shadow: var(--shadow-sm);
+        text-align: left;
+        border-left: 5px solid var(--highlight-blue);
+      }
+      .gallery-preview {
+        padding: 4rem 5%;
+      }
+      .gallery-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        height: 280px;
+      }
+      .gallery-item {
+        background-size: cover;
+        border-radius: 1rem;
+        transition: 0.3s;
+        cursor: pointer;
+        background-position: center;
+      }
+      .gallery-item {
+        height: 140px;
+      }
+      .final-cta {
+        background:
+          linear-gradient(rgba(30, 42, 94, 0.9), rgba(30, 42, 94, 0.9)),
+          url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80")
+            center/cover fixed;
+        padding: 5rem 2rem;
+        text-align: center;
+        color: white;
+      }
+      /* Footer */
+      footer {
+        background: #0b132b;
+        color: #ddd;
+        padding: 3rem 5% 1.5rem;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+      .footer-grid a {
+        color: #ccc;
+        text-decoration: none;
+        transition: 0.2s;
+      }
+      .social-links i {
+        font-size: 1.5rem;
+        margin-right: 1rem;
+      }
+
+      @media (max-width: 992px) {
         .nav-menu {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-            align-items: center;
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 80px;
+          left: 0;
+          width: 100%;
+          background: white;
+          padding: 1.5rem;
+          box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+          gap: 1.2rem;
         }
-        .nav-link {
-            text-decoration: none;
-            font-weight: 600;
-            color: var(--text-dark);
-            transition: color 0.2s;
-            font-size: 0.95rem;
+        .nav-menu.active {
+          display: flex;
         }
-        .nav-link:hover { color: var(--highlight-blue); }
-        .btn-apply-nav {
-            background: var(--highlight-blue);
-            color: white !important;
-            padding: 0.5rem 1.25rem;
-            border-radius: 30px;
-        }
-        .btn-apply-nav:hover { background: var(--primary-deep); transform: scale(0.97); }
         .menu-toggle {
-            display: none;
-            font-size: 1.7rem;
-            cursor: pointer;
-            color: var(--primary-deep);
+          display: block;
         }
-
-        /* ---------- HERO SECTION (ENHANCED) ---------- */
-        .hero {
-            position: relative;
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-        }
-        .hero-slider {
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-        }
-        .hero-slide {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center 30%;
-            opacity: 0;
-            transition: opacity 1.2s ease-in-out;
-        }
-        .hero-slide.active { opacity: 1; }
-        .hero-slide::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(30,42,94,0.75) 0%, rgba(0,0,0,0.45) 100%);
-        }
-        .hero-content {
-            position: relative;
-            z-index: 5;
-            max-width: 850px;
-            padding: 1.5rem;
-            color: white;
-        }
-        .hero-content h1 {
-            font-size: clamp(2.5rem, 7vw, 4.5rem);
-            margin-bottom: 1.25rem;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-        .hero-buttons { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; }
-        .slider-dots {
-            position: absolute;
-            bottom: 2rem;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            z-index: 10;
-        }
-        .dot {
-            width: 10px;
-            height: 10px;
-            background: rgba(255,255,255,0.5);
-            border-radius: 20px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .dot.active { width: 32px; background: var(--highlight-blue); }
-
-        /* ---------- QUICK ACCESS CARDS (REDESIGN) ---------- */
-        .quick-access {
-            margin-top: -3rem;
-            position: relative;
-            z-index: 20;
-            padding: 0 5%;
-        }
-        .quick-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            background: white;
-            border-radius: 2rem;
-            box-shadow: var(--shadow-md);
-            overflow: hidden;
-        }
-        .quick-card {
-            padding: 2rem 1rem;
-            text-align: center;
-            text-decoration: none;
-            transition: var(--transition);
-            background: white;
-            border-right: 1px solid var(--gray-300);
-        }
-        .quick-card:last-child { border: none; }
-        .quick-card i { font-size: 2.4rem; color: var(--highlight-blue); margin-bottom: 0.75rem; }
-        .quick-card span { font-weight: 700; color: var(--primary-deep); display: block; }
-        .quick-card:hover { background: var(--primary-deep); transform: translateY(-6px); }
-        .quick-card:hover i, .quick-card:hover span { color: white; }
-
-        /* ---------- ABOUT PREVIEW (REFINED) ---------- */
-        .about-section { padding: 5rem 5%; background: var(--gray-100); }
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        .about-badge { color: var(--highlight-blue); font-weight: 700; letter-spacing: 1px; margin-bottom: 0.75rem; display: inline-block; }
-        .about-title { font-size: 2.5rem; color: var(--primary-deep); margin-bottom: 1.5rem; }
-        .about-title span { color: var(--highlight-blue); }
-        .feature-list { display: flex; flex-direction: column; gap: 0.8rem; margin: 2rem 0; }
-        .feature-item { display: flex; align-items: center; gap: 0.75rem; }
-        .feature-item i { color: var(--gold-accent); font-size: 1.25rem; }
-        .about-image-stack {
-            position: relative;
-        }
-        .main-img {
-            width: 100%;
-            border-radius: 1.5rem;
-            box-shadow: 25px 25px 0 var(--accent-soft);
+        .about-grid,
+        .program-block,
+        .program-block.reverse {
+          grid-template-columns: 1fr;
+          flex-direction: column;
         }
         .quote-card {
-            background: var(--primary-deep);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 1rem;
-            position: absolute;
-            bottom: -1.5rem;
-            right: -1rem;
-            width: 70%;
-            box-shadow: var(--shadow-md);
+          position: relative;
+          right: 0;
+          width: 100%;
+          margin-top: 1rem;
         }
+        .quick-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+          height: auto;
+          gap: 0.8rem;
+        }
+      }
+      @media (max-width: 640px) {
+        .quick-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
 
-        /* ---------- FEATURES GRID (WHY CHOOSE US) ---------- */
-        .features-section { padding: 5rem 5%; text-align: center; }
-        .section-sub { color: var(--highlight-blue); font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem; display: block; }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 1.5rem;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            border-bottom: 4px solid transparent;
-        }
-        .feature-card:hover { border-bottom-color: var(--highlight-blue); transform: translateY(-8px); }
-        .feature-icon { background: var(--accent-soft); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--primary-deep); font-size: 2rem; }
+      /* ========= FOOTER (CONSISTENT) ========= */
+      footer {
+        background: #0b132b;
+        color: #ddd;
+        padding: 3rem 5% 1.5rem;
+        margin-top: 3rem;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .footer-col h4 {
+        color: white;
+        margin-bottom: 1.2rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+      .footer-col a,
+      .footer-col p {
+        color: #bbb;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 0.6rem;
+        transition: 0.2s;
+        font-size: 0.9rem;
+      }
+      .footer-col a:hover {
+        color: var(--highlight-blue);
+        transform: translateX(3px);
+      }
+      .social-icons a {
+        font-size: 1.3rem;
+        margin-right: 1rem;
+        display: inline-block;
+        color: #bbb;
+      }
+      .social-icons a:hover {
+        color: var(--highlight-blue);
+      }
+      .footer-bottom {
+        text-align: center;
+        border-top: 1px solid #2d3748;
+        padding-top: 1.5rem;
+        font-size: 0.8rem;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      .designer-tag {
+        color: var(--gold-accent);
+        font-weight: 600;
+      }
 
-        /* ---------- PROGRAM SHOWCASE (modern) ---------- */
-        .program-showcase { display: flex; flex-direction: column; }
-        .program-block {
-            display: flex;
-            min-height: 460px;
+      @media (max-width: 992px) {
+        .nav-menu {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 80px;
+          left: 0;
+          width: 100%;
+          background: white;
+          padding: 1.5rem;
+          box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+          gap: 1rem;
+          z-index: 999;
         }
-        .program-block.reverse { flex-direction: row-reverse; }
-        .program-text {
-            flex: 1;
-            padding: 4rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            color: white;
+        .nav-menu.active {
+          display: flex;
         }
-        .program-primary { background: var(--primary-deep); }
-        .program-secondary { background: #B91C1C; }
-        .program-img {
-            flex: 1;
-            background-size: cover;
-            background-position: center;
+        .menu-toggle {
+          display: block;
         }
-        /* ---------- ACHIEVEMENT COUNTERS ---------- */
-        .stats-section {
-            background: linear-gradient(120deg, var(--primary-deep) 0%, #1E2A4E 100%);
-            padding: 4rem 5%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            text-align: center;
-            gap: 2rem;
+        .contact-grid {
+          grid-template-columns: 1fr;
         }
-        .stat h3 { font-size: 3rem; color: var(--gold-accent); margin-bottom: 0.5rem; }
-        .stat p { color: white; font-weight: 500; letter-spacing: 1px; }
-
-        /* ---------- TESTIMONIALS / GALLERY / CTA ---------- */
-        .testimonial-section { padding: 5rem 5%; background: var(--gray-100); text-align: center; }
-        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 2rem; margin-top: 3rem; max-width: 1000px; margin-inline: auto; }
-        .testimonial-card { background: white; padding: 2rem; border-radius: 1.5rem; box-shadow: var(--shadow-sm); text-align: left; border-left: 5px solid var(--highlight-blue); }
-        .gallery-preview { padding: 4rem 5%; }
-        .gallery-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 2rem; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; height: 280px; }
-        .gallery-item { background-size: cover; border-radius: 1rem; transition: 0.3s; cursor: pointer; background-position: center; }
-        .final-cta {
-            background: linear-gradient(rgba(30,42,94,0.9), rgba(30,42,94,0.9)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80') center/cover fixed;
-            padding: 5rem 2rem;
-            text-align: center;
-            color: white;
+        .info-cards {
+          flex-direction: column;
+          margin-top: -2rem;
         }
-        /* Footer */
-        footer { background: #0B132B; color: #ddd; padding: 3rem 5% 1.5rem; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 2rem; margin-bottom: 2rem; }
-        .footer-grid a { color: #ccc; text-decoration: none; transition: 0.2s; }
-        .social-links i { font-size: 1.5rem; margin-right: 1rem; }
-
-        @media (max-width: 992px) {
-            .nav-menu { display: none; flex-direction: column; position: absolute; top: 80px; left: 0; width: 100%; background: white; padding: 1.5rem; box-shadow: 0 20px 30px rgba(0,0,0,0.1); gap: 1.2rem; }
-            .nav-menu.active { display: flex; }
-            .menu-toggle { display: block; }
-            .about-grid, .program-block, .program-block.reverse { grid-template-columns: 1fr; flex-direction: column; }
-            .quote-card { position: relative; right: 0; width: 100%; margin-top: 1rem; }
-            .quick-grid { grid-template-columns: repeat(2,1fr); }
-            .gallery-grid { grid-template-columns: repeat(2,1fr); height: auto; gap: 0.8rem; }
+        .contact-hero h1 {
+          font-size: 2.5rem;
         }
-        @media (max-width: 640px) {
-            .quick-grid { grid-template-columns: 1fr; }
-            .hero-buttons { flex-direction: column; align-items: center; }
+      }
+      @media (max-width: 640px) {
+        .form-card {
+          padding: 1.5rem;
         }
-        
-        /* ========= FOOTER (CONSISTENT) ========= */
-        footer {
-            background: #0B132B;
-            color: #ddd;
-            padding: 3rem 5% 1.5rem;
-            margin-top: 3rem;
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-            max-width: 1280px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .footer-col h4 { color: white; margin-bottom: 1.2rem; font-size: 1.1rem; font-weight: 600; }
-        .footer-col a, .footer-col p { color: #bbb; text-decoration: none; display: block; margin-bottom: 0.6rem; transition: 0.2s; font-size: 0.9rem; }
-        .footer-col a:hover { color: var(--highlight-blue); transform: translateX(3px); }
-        .social-icons a { font-size: 1.3rem; margin-right: 1rem; display: inline-block; color: #bbb; }
-        .social-icons a:hover { color: var(--highlight-blue); }
-        .footer-bottom {
-            text-align: center;
-            border-top: 1px solid #2d3748;
-            padding-top: 1.5rem;
-            font-size: 0.8rem;
-            max-width: 1280px;
-            margin: 0 auto;
-        }
-        .designer-tag { color: var(--gold-accent); font-weight: 600; }
-
-        @media (max-width: 992px) {
-            .nav-menu { display: none; flex-direction: column; position: absolute; top: 80px; left: 0; width: 100%; background: white; padding: 1.5rem; box-shadow: 0 20px 30px rgba(0,0,0,0.1); gap: 1rem; z-index: 999; }
-            .nav-menu.active { display: flex; }
-            .menu-toggle { display: block; }
-            .contact-grid { grid-template-columns: 1fr; }
-            .info-cards { flex-direction: column; margin-top: -2rem; }
-            .contact-hero h1 { font-size: 2.5rem; }
-        }
-        @media (max-width: 640px) {
-            .form-card { padding: 1.5rem; }
-        }
+      }
     </style>
-</head>
-<body>
-
-<!-- NAVIGATION (REDESIGNED) -->
-<nav class="navbar">
-    <div class="logo">
-        <img src="images/logoremoved.png" alt="Olanike Dairo Logo">
-    </div>
-    <ul class="nav-menu" id="navMenu">
+  </head>
+  <body>
+    <!-- NAVIGATION (REDESIGNED) -->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/logoremoved.png" alt="Olanike Dairo Logo" />
+      </div>
+      <ul class="nav-menu" id="navMenu">
         <li><a href="index.html" class="nav-link active">Home</a></li>
         <li><a href="about.html" class="nav-link">About Us</a></li>
         <li><a href="academics.html" class="nav-link">Academics</a></li>
@@ -428,230 +693,459 @@
         <li><a href="gallery.html" class="nav-link">Gallery</a></li>
         <li><a href="student-life.html" class="nav-link">Student Life</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
-    </ul>
-    <div class="menu-toggle" id="mobileToggle"><i class="fas fa-bars"></i></div>
-</nav>
+      </ul>
+      <div class="menu-toggle" id="mobileToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
 
-<!-- HERO WITH DYNAMIC SLIDER -->
-<section class="hero">
-    <div class="hero-slider">
-        <div class="hero-slide active" style="background-image: url('images/secondary.jpg');"></div>
-        <div class="hero-slide" style="background-image: url('images/students_in_class1.jpg');"></div>
-        <div class="hero-slide" style="background-image: url('images/students_in_class2.jpg');"></div>
-    </div>
-    <div class="hero-content">
-        <h1>Shaping Leaders, <br>Inspiring Greatness</h1>
-        <p>Where academic excellence meets character development — a transformative journey for every child.</p>
+    <!-- HERO WITH DYNAMIC SLIDER -->
+    <section class="hero">
+      <div class="hero-slider">
+        <div
+          class="hero-slide active"
+          style="background-image: url(&quot;images/secondary.jpg&quot;)"
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url(&quot;images/students_in_class1.jpg&quot;);
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url(&quot;images/students_in_class2.jpg&quot;);
+          "
+        ></div>
+      </div>
+      <div class="hero-content">
+        <h1>Shaping Leaders, <br />Inspiring Greatness</h1>
+        <p>
+          Where academic excellence meets character development — a
+          transformative journey for every child.
+        </p>
         <div class="hero-buttons">
-            <a href="contact.html" class="btn btn-primary">Enroll Today <i class="fas fa-graduation-cap"></i></a>
-            <a href="student-life.html" class="btn btn-outline-light">Virtual Tour</a>
+          <a href="contact.html" class="btn btn-primary"
+            >Enroll Today <i class="fas fa-graduation-cap"></i
+          ></a>
+          <a href="student-life.html" class="btn btn-outline-light"
+            >Virtual Tour</a
+          >
         </div>
-    </div>
-    <div class="slider-dots" id="sliderDots"></div>
-</section>
+      </div>
+      <div class="slider-dots" id="sliderDots"></div>
+    </section>
 
-<!-- QUICK ACCESS LINKS (ENHANCED) -->
-<div class="quick-access">
-    <div class="quick-grid">
-        <a href="admissions.html" class="quick-card"><i class="fas fa-file-alt"></i><span>Admissions</span></a>
-        <a href="academics.html" class="quick-card"><i class="fas fa-calendar-check"></i><span>School Calendar</span></a>
-        <a href="contact.html" class="quick-card"><i class="fas fa-phone-alt"></i><span>Contact Us</span></a>
+    <!-- QUICK ACCESS LINKS (ENHANCED) -->
+    <div class="quick-access">
+      <div class="quick-grid">
+        <a href="admissions.html" class="quick-card"
+          ><i class="fas fa-file-alt"></i><span>Admissions</span></a
+        >
+        <a href="academics.html" class="quick-card"
+          ><i class="fas fa-calendar-check"></i><span>School Calendar</span></a
+        >
+        <a href="contact.html" class="quick-card"
+          ><i class="fas fa-phone-alt"></i><span>Contact Us</span></a
+        >
+      </div>
     </div>
-</div>
 
-<!-- ABOUT PREVIEW (REDESIGNED WITH BETTER HIERARCHY) -->
-<section class="about-section">
-    <div class="about-grid">
+    <!-- ABOUT PREVIEW (REDESIGNED WITH BETTER HIERARCHY) -->
+    <section class="about-section">
+      <div class="about-grid">
         <div>
-            <span class="about-badge"><i class="fas fa-school"></i> 15+ years of legacy</span>
-            <h2 class="about-title">Nurturing the <span>Total Child</span> Through Play & Hard Work</h2>
-            <p>At Olanike Dairo Secondary School, we combine innovative pedagogy with time-tested values. Our learners become confident, curious, and compassionate global citizens.</p>
-            <div class="feature-list">
-                <div class="feature-item"><i class="fas fa-check-circle"></i> <span>Modern STEAM curriculum</span></div>
-                <div class="feature-item"><i class="fas fa-check-circle"></i> <span>Exceptional moral & leadership framework</span></div>
-                <div class="feature-item"><i class="fas fa-check-circle"></i> <span>World-class sports & creative arts</span></div>
+          <span class="about-badge"
+            ><i class="fas fa-school"></i> 15+ years of legacy</span
+          >
+          <h2 class="about-title">
+            Nurturing the <span>Total Child</span> Through Play & Hard Work
+          </h2>
+          <p>
+            At Olanike Dairo Secondary School, we combine innovative pedagogy
+            with time-tested values. Our learners become confident, curious, and
+            compassionate global citizens.
+          </p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Modern STEAM curriculum</span>
             </div>
-            <a href="about.html#mission-vision" class="btn btn-secondary-outline">Discover our mission →</a>
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Exceptional moral & leadership framework</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>World-class sports & creative arts</span>
+            </div>
+          </div>
+          <a href="about.html#mission-vision" class="btn btn-secondary-outline"
+            >Discover our mission →</a
+          >
         </div>
         <div class="about-image-stack">
-            <img src="images/playground3.jpg" alt="campus life" class="main-img">
-            <div class="quote-card">
-                <i class="fas fa-quote-left" style="margin-right: 8px; opacity: 0.7;"></i> A school where every child’s potential is unlocked with warmth and excellence.
-                <strong style="display: block; margin-top: 8px;">— Principal’s Desk</strong>
-            </div>
+          <img
+            src="images/playground3.jpg"
+            alt="campus life"
+            class="main-img"
+          />
+          <div class="quote-card">
+            <i
+              class="fas fa-quote-left"
+              style="margin-right: 8px; opacity: 0.7"
+            ></i>
+            A school where every child’s potential is unlocked with warmth and
+            excellence.
+            <strong style="display: block; margin-top: 8px"
+              >— Principal’s Desk</strong
+            >
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- WHY CHOOSE US (REFINED) -->
-<section class="features-section">
-    <span class="section-sub">Why Olanike Dairo</span>
-    <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem;">The Benchmark of Excellence</h2>
-    <div class="features-grid">
-        <div class="feature-card"><div class="feature-icon"><i class="fas fa-chart-line"></i></div><h3>Academic Rigor</h3><p>Consistent WAEC outstanding results and university placements globally.</p></div>
-        <div class="feature-card"><div class="feature-icon"><i class="fas fa-hand-sparkles"></i></div><h3>Moral Foundation</h3><p>Discipline, respect and empathy embedded into daily school life.</p></div>
-        <div class="feature-card"><div class="feature-icon"><i class="fas fa-microchip"></i></div><h3>Innovation Hub</h3><p>Robotics, coding & design thinking labs for 21st-century skills.</p></div>
-    </div>
-</section>
+    <!-- WHY CHOOSE US (REFINED) -->
+    <section class="features-section">
+      <span class="section-sub">Why Olanike Dairo</span>
+      <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem">
+        The Benchmark of Excellence
+      </h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Academic Rigor</h3>
+          <p>
+            Consistent WAEC outstanding results and university placements
+            globally.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-hand-sparkles"></i></div>
+          <h3>Moral Foundation</h3>
+          <p>
+            Discipline, respect and empathy embedded into daily school life.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-microchip"></i></div>
+          <h3>Innovation Hub</h3>
+          <p>
+            Robotics, coding & design thinking labs for 21st-century skills.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<!-- PROGRAM SECTIONS (MODERN TOUCH) -->
-<div class="program-showcase">
-    <div class="program-block">
+    <!-- PROGRAM SECTIONS (MODERN TOUCH) -->
+    <div class="program-showcase">
+      <div class="program-block">
         <div class="program-text program-primary">
-            <span style="font-weight: 600; letter-spacing: 1px; color: #FFE0E0;">FOUNDATION YEARS</span>
-            <h2 style="font-size: 2.5rem; margin: 0.5rem 0 1rem;">Primary School</h2>
-            <p>Inquiry-based learning, numeracy & literacy excellence, plus arts and physical development — building confident young minds.</p>
-            <a href="#" class="btn btn-outline-light" style="align-self: flex-start; margin-top: 1.5rem;">Learn more <i class="fas fa-arrow-right"></i></a>
+          <span style="font-weight: 600; letter-spacing: 1px; color: #ffe0e0"
+            >FOUNDATION YEARS</span
+          >
+          <h2 style="font-size: 2.5rem; margin: 0.5rem 0 1rem">
+            Primary School
+          </h2>
+          <p>
+            Inquiry-based learning, numeracy & literacy excellence, plus arts
+            and physical development — building confident young minds.
+          </p>
+          <a
+            href="#"
+            class="btn btn-outline-light"
+            style="align-self: flex-start; margin-top: 1.5rem"
+            >Learn more <i class="fas fa-arrow-right"></i
+          ></a>
         </div>
-        <div class="program-img" style="background-image: url('images/primary\ building.jpg');"></div>
-    </div>
-    <div class="program-block reverse">
+        <div
+          class="program-img"
+          style="
+            background-image: url(&quot;images/primary\ building.jpg&quot;);
+          "
+        ></div>
+      </div>
+      <div class="program-block reverse">
         <div class="program-text program-secondary">
-            <span style="font-weight: 600;">SECONDARY SCHOOL</span>
-            <h2 style="font-size: 2.5rem; margin: 0.5rem 0 1rem;">Future-Ready Leaders</h2>
-            <p>Advanced sciences, humanities, entrepreneurship & leadership training. Fully equipped labs and career mentorship.</p>
-            <a href="#" class="btn btn-outline-light" style="align-self: flex-start; margin-top: 1.5rem;">Explore secondary →</a>
+          <span style="font-weight: 600">SECONDARY SCHOOL</span>
+          <h2 style="font-size: 2.5rem; margin: 0.5rem 0 1rem">
+            Future-Ready Leaders
+          </h2>
+          <p>
+            Advanced sciences, humanities, entrepreneurship & leadership
+            training. Fully equipped labs and career mentorship.
+          </p>
+          <a
+            href="#"
+            class="btn btn-outline-light"
+            style="align-self: flex-start; margin-top: 1.5rem"
+            >Explore secondary →</a
+          >
         </div>
-        <div class="program-img" style="background-image: url('images/secondary\ building.jpg');"></div>
+        <div
+          class="program-img"
+          style="
+            background-image: url(&quot;images/secondary\ building.jpg&quot;);
+          "
+        ></div>
+      </div>
     </div>
-</div>
 
-<!-- ACHIEVEMENT STATS (COUNTER) -->
-<div class="stats-section">
-    <div class="stat"><h3 class="counter" data-target="98">0</h3><p>WAEC Pass Rate (%)</p></div>
-    <div class="stat"><h3 class="counter" data-target="15">0</h3><p>Years of Excellence</p></div>
-    <div class="stat"><h3 class="counter" data-target="25">0</h3><p>Awards & Recognition</p></div>
-    <div class="stat"><h3 class="counter" data-target="1200">0</h3><p>Active Students</p></div>
-</div>
-
-<!-- TESTIMONIALS (FRESH) -->
-<section class="testimonial-section">
-    <span class="section-sub">Voices of our community</span>
-    <h2 style="font-size: 2rem;">What Parents & Alumni Say</h2>
-    <div class="testimonial-grid">
-        <div class="testimonial-card"><i class="fas fa-quote-left" style="color: var(--highlight-blue); font-size: 1.8rem; opacity: 0.5;"></i><p style="margin: 1rem 0;">“The holistic growth I’ve seen in my daughter is remarkable. Discipline and creativity go hand in hand at Olanike Dairo.”</p><strong>— Mrs. Adeyemi</strong><span style="display: block; color: gray; font-size: 0.8rem;">Parent</span></div>
-        <div class="testimonial-card"><i class="fas fa-quote-left" style="color: var(--highlight-blue); font-size: 1.8rem; opacity: 0.5;"></i><p style="margin: 1rem 0;">“As an alumna, I can confidently say the school gave me the resilience and leadership skills that shaped my career.”</p><strong>— Dr. Tobi O.</strong><span style="display: block; color: gray; font-size: 0.8rem;">Alumni, Class of 2012</span></div>
+    <!-- ACHIEVEMENT STATS (COUNTER) -->
+    <div class="stats-section">
+      <div class="stat">
+        <h3 class="counter" data-target="98">0</h3>
+        <p>WAEC Pass Rate (%)</p>
+      </div>
+      <div class="stat">
+        <h3 class="counter" data-target="15">0</h3>
+        <p>Years of Excellence</p>
+      </div>
+      <div class="stat">
+        <h3 class="counter" data-target="25">0</h3>
+        <p>Awards & Recognition</p>
+      </div>
+      <div class="stat">
+        <h3 class="counter" data-target="1200">0</h3>
+        <p>Active Students</p>
+      </div>
     </div>
-</section>
 
-<!-- GALLERY PREVIEW (REDESIGNED) -->
-<section class="gallery-preview">
-    <div class="gallery-header"><h2>Moments @ Olanike Dairo</h2><a href="gallery.html" style="color: var(--highlight-blue); font-weight: 600;">View full gallery →</a></div>
-    <div class="gallery-grid">
-        <div class="gallery-item" style="background-image: url('images/IMG-20241023-WA0019.jpg');"></div>
-        <div class="gallery-item" style="background-image: url('images/g7.jpg');"></div>
-        <div class="gallery-item" style="background-image: url('images/founders.png');"></div>
-        <div class="gallery-item" style="background-image: url('images/students-at-marine.jpg');"></div>
+    <!-- TESTIMONIALS (FRESH) -->
+    <section class="testimonial-section">
+      <span class="section-sub">Voices of our community</span>
+      <h2 style="font-size: 2rem">What Parents & Alumni Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <i
+            class="fas fa-quote-left"
+            style="
+              color: var(--highlight-blue);
+              font-size: 1.8rem;
+              opacity: 0.5;
+            "
+          ></i>
+          <p style="margin: 1rem 0">
+            “The holistic growth I’ve seen in my daughter is remarkable.
+            Discipline and creativity go hand in hand at Olanike Dairo.”
+          </p>
+          <strong>— Mrs. Adeyemi</strong
+          ><span style="display: block; color: gray; font-size: 0.8rem"
+            >Parent</span
+          >
+        </div>
+        <div class="testimonial-card">
+          <i
+            class="fas fa-quote-left"
+            style="
+              color: var(--highlight-blue);
+              font-size: 1.8rem;
+              opacity: 0.5;
+            "
+          ></i>
+          <p style="margin: 1rem 0">
+            “As an alumna, I can confidently say the school gave me the
+            resilience and leadership skills that shaped my career.”
+          </p>
+          <strong>— Dr. Tobi O.</strong
+          ><span style="display: block; color: gray; font-size: 0.8rem"
+            >Alumni, Class of 2012</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY PREVIEW (REDESIGNED) -->
+    <section class="gallery-preview">
+      <div class="gallery-header">
+        <h2>Moments @ Olanike Dairo</h2>
+        <a
+          href="gallery.html"
+          style="color: var(--highlight-blue); font-weight: 600"
+          >View full gallery →</a
+        >
+      </div>
+      <div class="gallery-grid">
+        <div
+          class="gallery-item"
+          style="
+            background-image: url(&quot;images/IMG-20241023-WA0019.jpg&quot;);
+          "
+        ></div>
+        <div
+          class="gallery-item"
+          style="background-image: url(&quot;images/g7.jpg&quot;)"
+        ></div>
+        <div
+          class="gallery-item"
+          style="background-image: url(&quot;images/founders.png&quot;)"
+        ></div>
+        <div
+          class="gallery-item"
+          style="
+            background-image: url(&quot;images/students-at-marine.jpg&quot;);
+          "
+        ></div>
+      </div>
+    </section>
+
+    <!-- FINAL CALL TO ACTION -->
+    <div class="final-cta">
+      <h2>Begin Your Child’s Success Story</h2>
+      <p style="margin: 1rem auto; max-width: 600px">
+        Admissions open for 2026/2027 session — limited seats available.
+      </p>
+      <div
+        style="
+          display: flex;
+          gap: 1.2rem;
+          justify-content: center;
+          flex-wrap: wrap;
+        "
+      >
+        <a
+          href="contact.html"
+          class="btn btn-primary"
+          style="background: white; color: var(--primary-deep)"
+          >Apply Now <i class="fas fa-arrow-right"></i
+        ></a>
+        <a href="contact.html" class="btn btn-outline-light"
+          >Request Info Packet</a
+        >
+      </div>
     </div>
-</section>
 
-<!-- FINAL CALL TO ACTION -->
-<div class="final-cta">
-    <h2>Begin Your Child’s Success Story</h2>
-    <p style="margin: 1rem auto; max-width: 600px;">Admissions open for 2026/2027 session — limited seats available.</p>
-    <div style="display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap;">
-        <a href="contact.html" class="btn btn-primary" style="background: white; color: var(--primary-deep);">Apply Now <i class="fas fa-arrow-right"></i></a>
-        <a href="contact.html" class="btn btn-outline-light">Request Info Packet</a>
-    </div>
-</div>
-
-<footer>
-    <div class="footer-grid">
+    <footer>
+      <div class="footer-grid">
         <div class="footer-col">
-            <h4>Contact Us</h4>
-            <p><i class="fas fa-map-marker-alt"></i> 2 Strachan St, Obalende, Lagos Island, Lagos 102273</p>
-            <p><i class="fas fa-map-marker-alt"></i> 32 Strachan St, Obalende, Lagos Island, Lagos 102273</p>
-            <p><i class="fas fa-phone"></i> 02013424038</p>
-            <p><i class="fas fa-envelope"></i> olanikedairocentre@gmail.com</p>
+          <h4>Contact Us</h4>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 2 Strachan St, Obalende, Lagos
+            Island, Lagos 102273
+          </p>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 32 Strachan St, Obalende,
+            Lagos Island, Lagos 102273
+          </p>
+          <p><i class="fas fa-phone"></i> 02013424038</p>
+          <p><i class="fas fa-envelope"></i> olanikedairocentre@gmail.com</p>
         </div>
         <div class="footer-col">
-            <h4>Quick Links</h4>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="academics.html">Academics</a>
-            <a href="admissions.html">Admissions</a>
-            <a href="founder.html">Founder</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="student-life.html">Student Life</a>
-            <a href="contact.html">Contact</a>
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="academics.html">Academics</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="founder.html">Founder</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="student-life.html">Student Life</a>
+          <a href="contact.html">Contact</a>
         </div>
-    </div>
-    <div class="footer-bottom">
+      </div>
+      <div class="footer-bottom">
         <p>© 2026 Olanike Dairo Schools. All rights reserved.</p>
-        <p>Designed by <span class="designer-tag"><a href="https://www.princejetro.com.ng/" target="_blank" rel="noopener noreferrer">PrinceJetro</a></span>.</p>
-    </div>
-</footer>
+        <p>
+          Designed by
+          <span class="designer-tag"
+            ><a
+              href="https://www.princejetro.com.ng/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >PrinceJetro</a
+            ></span
+          >.
+        </p>
+      </div>
+    </footer>
 
-<script>
-    // MOBILE TOGGLE
-    const toggleBtn = document.getElementById('mobileToggle');
-    const navMenu = document.getElementById('navMenu');
-    toggleBtn.addEventListener('click', () => navMenu.classList.toggle('active'));
+    <script>
+      // MOBILE TOGGLE
+      const toggleBtn = document.getElementById("mobileToggle");
+      const navMenu = document.getElementById("navMenu");
+      toggleBtn.addEventListener("click", () =>
+        navMenu.classList.toggle("active"),
+      );
 
-    // SLIDER LOGIC
-    const slides = document.querySelectorAll('.hero-slide');
-    const dotsContainer = document.getElementById('sliderDots');
-    let currentIdx = 0;
-    let slideInterval;
-    function buildDots() {
-        dotsContainer.innerHTML = '';
+      // SLIDER LOGIC
+      const slides = document.querySelectorAll(".hero-slide");
+      const dotsContainer = document.getElementById("sliderDots");
+      let currentIdx = 0;
+      let slideInterval;
+      function buildDots() {
+        dotsContainer.innerHTML = "";
         slides.forEach((_, i) => {
-            const dot = document.createElement('span');
-            dot.classList.add('dot');
-            if (i === currentIdx) dot.classList.add('active');
-            dot.addEventListener('click', () => goToSlide(i));
-            dotsContainer.appendChild(dot);
+          const dot = document.createElement("span");
+          dot.classList.add("dot");
+          if (i === currentIdx) dot.classList.add("active");
+          dot.addEventListener("click", () => goToSlide(i));
+          dotsContainer.appendChild(dot);
         });
-    }
-    function goToSlide(index) {
-        slides.forEach((s, i) => s.classList.toggle('active', i === index));
-        document.querySelectorAll('.dot').forEach((dot, i) => dot.classList.toggle('active', i === index));
+      }
+      function goToSlide(index) {
+        slides.forEach((s, i) => s.classList.toggle("active", i === index));
+        document
+          .querySelectorAll(".dot")
+          .forEach((dot, i) => dot.classList.toggle("active", i === index));
         currentIdx = index;
         resetInterval();
-    }
-    function nextSlide() { goToSlide((currentIdx + 1) % slides.length); }
-    function resetInterval() { clearInterval(slideInterval); slideInterval = setInterval(nextSlide, 5500); }
-    buildDots();
-    slideInterval = setInterval(nextSlide, 5500);
+      }
+      function nextSlide() {
+        goToSlide((currentIdx + 1) % slides.length);
+      }
+      function resetInterval() {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, 5500);
+      }
+      buildDots();
+      slideInterval = setInterval(nextSlide, 5500);
 
-    // COUNTER ANIMATION with intersection observer
-    const counters = document.querySelectorAll('.counter');
-    const speed = 180;
-    function startCounters() {
-        counters.forEach(counter => {
-            const updateCount = () => {
-                const target = +counter.getAttribute('data-target');
-                const current = +counter.innerText;
-                const inc = target / speed;
-                if (current < target) {
-                    counter.innerText = Math.ceil(current + inc);
-                    setTimeout(updateCount, 18);
-                } else { counter.innerText = target; }
-            };
-            updateCount();
+      // COUNTER ANIMATION with intersection observer
+      const counters = document.querySelectorAll(".counter");
+      const speed = 180;
+      function startCounters() {
+        counters.forEach((counter) => {
+          const updateCount = () => {
+            const target = +counter.getAttribute("data-target");
+            const current = +counter.innerText;
+            const inc = target / speed;
+            if (current < target) {
+              counter.innerText = Math.ceil(current + inc);
+              setTimeout(updateCount, 18);
+            } else {
+              counter.innerText = target;
+            }
+          };
+          updateCount();
         });
-    }
-    const statsSection = document.querySelector('.stats-section');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) { startCounters(); observer.unobserve(entry.target); }
+      }
+      const statsSection = document.querySelector(".stats-section");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              startCounters();
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.4 },
+      );
+      observer.observe(statsSection);
+
+      // add placeholder image fallback for missing unsplash? no issue.
+      // Also add smooth hover effect on program blocks
+      const progBlocks = document.querySelectorAll(".program-block");
+      progBlocks.forEach((block) => {
+        block.addEventListener("mouseenter", () => {
+          const imgDiv = block.querySelector(".program-img");
+          if (imgDiv) imgDiv.style.transform = "scale(1.02)";
         });
-    }, { threshold: 0.4 });
-    observer.observe(statsSection);
-    
-    // add placeholder image fallback for missing unsplash? no issue.
-    // Also add smooth hover effect on program blocks
-    const progBlocks = document.querySelectorAll('.program-block');
-    progBlocks.forEach(block => {
-        block.addEventListener('mouseenter', () => {
-            const imgDiv = block.querySelector('.program-img');
-            if(imgDiv) imgDiv.style.transform = 'scale(1.02)';
+        block.addEventListener("mouseleave", () => {
+          const imgDiv = block.querySelector(".program-img");
+          if (imgDiv) imgDiv.style.transform = "scale(1)";
         });
-        block.addEventListener('mouseleave', () => {
-            const imgDiv = block.querySelector('.program-img');
-            if(imgDiv) imgDiv.style.transform = 'scale(1)';
-        });
-    });
-</script>
-</body>
+      });
+    </script>
+  </body>
 </html>
